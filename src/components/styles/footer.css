@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  align-self: flex-end;
+  flex-flow: column nowrap;
+  width: 100%;
+  bottom: 0px;
+  background-color: none;
+}
+
+.footerInfo {
+  align-self: center;
+  width: 100%;
+  height: fit-content;
+  padding: 30px 20px;
+  background-color: var(--white);
+  color: var(--rainbowTurquoise);
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+}

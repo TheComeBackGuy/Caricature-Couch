@@ -2,6 +2,9 @@
   --background: #ffffff;
   --foreground: #171717;
 
+  --white: #f9efdc;
+  --black: #2b2a2a;
+  --blackRed: #6d5c4b;
   --tanLight: #f3e4c5;
   --tanMid: #efd09a;
   --tanShadow: #e1ad74;
@@ -23,17 +26,17 @@
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
   line-height: 1.5em;
+  height: 100%;
 }
 
 body {
   color: var(--tanDarkText);
   background: var(--tanLight);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: 400px;
 }
 
 * {
@@ -57,51 +60,36 @@ a {
 
 .rainbowContainer {
   display: flex;
-  top: 100px;
-  position: absolute;
-  align-self: center;
-  flex-flow: row nowrap;
-  width: 200px;
-  height: 100vh;
-  /* border: 1px solid red; */
-  gap: 10px;
-  /* margin-top: -70px; */
+  width: fit-content;
+  height: stretch;
+  align-self: stretch;
+  justify-self: stretch;
+  gap: 5%;
   z-index: 1;
+  /* border: 2px solid black; */
 }
 
 .rainbowStripe {
   width: 32px;
-}
-
-.threeColumn {
-  display: grid;
-  grid-template-columns: 300px 200px 300px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  @media (max-width: 700px) {
+    width: 20px;
+  }
   @media (max-width: 500px) {
-    display: flex;
-    flex-flow: row nowrap;
+    width: 15px;
   }
 }
 
-.footer {
+.contentArea {
   display: flex;
   flex-flow: column nowrap;
-  padding-bottom: 20px;
-  justify-content: flex-start;
-  align-items: center;
-  justify-self: flex-end;
-  width: inherit;
-  height: 251px;
-  /* border: 1px solid red; */
-  background-image: url("images/footer-boxes.gif");
-  background-position: bottom center;
-  background-repeat: no-repeat;
+  align-items: flex-start;
+  width: 100%;
+  height: fit-content;
   overflow: visible;
 }
+
 .left {
-  padding-right: 10px;
+  /* padding-right: 10px; */
   text-align: right;
 }
 
@@ -112,7 +100,14 @@ h1 {
   margin-bottom: 1em;
 }
 
-.address{
+.address {
   display: block;
-  color: var(--rainbowBlue)
+  color: var(--rainbowBlue);
+}
+
+h2 {
+  color: var(--rainbowTurquoise);
+  font-size: large;
+  text-transform: uppercase;
+  font-weight: 1000;
 }

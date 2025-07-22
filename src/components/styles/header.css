@@ -1,0 +1,40 @@
+header {
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  /* border: 2px solid red; */
+  z-index: 2000;
+}
+
+.headerContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-top: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  min-width: 600px;
+  height: fit-content;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.logoContainer {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  margin-top: 15px;
+  aspect-ratio: 17 / 7;
+  max-width: 500px;
+  z-index: 3;
+  justify-self: center;
+  /* border: 2px solid red; */
+}
+
+.polaroidContainer {
+  display: flex;
+  margin-top: -40px;
+  margin-left: -10%;
+  flex-flow: row nowrap;
+  width: 120%;
+}
