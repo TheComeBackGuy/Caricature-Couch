@@ -14,7 +14,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  min-width: 600px;
+  /* min-width: 600px; */
   height: fit-content;
   overflow: hidden;
   margin-bottom: 30px;
@@ -29,12 +29,4 @@ header {
   z-index: 3;
   justify-self: center;
   /* border: 2px solid red; */
-}
-
-.polaroidContainer {
-  display: flex;
-  margin-top: -40px;
-  margin-left: -10%;
-  flex-flow: row nowrap;
-  width: 120%;
 }

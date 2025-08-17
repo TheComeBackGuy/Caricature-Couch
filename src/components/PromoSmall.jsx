@@ -1,12 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../app/page.module.css";
+import "./styles/promoSmall.css";
 export default function PromoSmall({ img, hdr, text }) {
+  console.log(text);
   return (
-    <div className="promoSmallContainer">
-      <div className={styles.promoSmallCircle}>
-        {/* <img src="../app/images/booth.png" alt="the booth" /> */}
-        <Image src={img} alt="shop pic" fill style={{ marginLeft: "15px" }} />
+    <div>
+      <div className="promoSmallCircle">
+        <Image
+          src={img}
+          alt="shop pic"
+          // width={409} height={209}
+          fill
+          style={{ objectFit: "contain" }}
+        />
       </div>
       <h2>{hdr}</h2>
       <p>{text}</p>

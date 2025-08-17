@@ -1,6 +1,8 @@
 import React from "react";
 import "../app/globals.css";
 import "../app/page.module.css";
+import Image from "next/image";
+import StickerColumn from "./StickerColumn";
 
 export default function Rainbow({ side }) {
   function whichSide(side) {
@@ -15,6 +17,7 @@ export default function Rainbow({ side }) {
 
   return (
     <div className="rainbowContainer" style={{ flexFlow: whichSide(side) }}>
+      {/* <StickerColumn /> */}
       <div
         className="rainbowStripe"
         style={{

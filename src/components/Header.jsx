@@ -15,10 +15,6 @@ export default function Header() {
           fill
         />
       </div>
-      <div className="polaroidContainer">
-        <Polaroid rotate={5} z={1} />
-        <Polaroid rotate={-5} z={2} />
-      </div>
     </header>
   );
 }

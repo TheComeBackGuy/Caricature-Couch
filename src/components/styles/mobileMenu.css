@@ -1,0 +1,88 @@
+.mobile-tab {
+  background-color: var(--rainbowRed);
+  color: var(--white);
+  position: absolute;
+  padding: 10px;
+  /* width: 250px; */
+  min-width: 250px;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  top: 0;
+  left: 0;
+  /* max-width: 200px; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1000;
+  /* transform: translate(50%, 0%); */
+  transform: translate(-50%, -50%) rotate(-45deg);
+  cursor: pointer;
+  border: none;
+  @media (max-width: 700px) {
+    min-width: 150px;
+  }
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.mobileMenuContainer {
+  position: fixed;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 5000;
+  overflow: hidden;
+  background-color: var(--rainbowRed);
+  color: var(--white);
+  /* border: 5px solid white; */
+  gap: 20px;
+  align-items: center;
+}
+
+.mobileMenuList {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  /* border: 3px dotted black; */
+  font-size: xx-large;
+  gap: 1em;
+}
+.mobileLogoContainer {
+  position: relative;
+  width: 80%;
+  max-width: 400px;
+  min-width: none;
+  aspect-ratio: 400 / 155;
+  /* border: 3px solid black; */
+}
+
+.close {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  color: var(--rainbowRedLight);
+  font-size: xx-large;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px;
+  border: 4px solid var(--rainbowRedLight);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileMenuItem {
+  background-color: transparent;
+  border: none;
+  font-size: xx-large;
+  color: var(--white);
+  cursor: pointer;
+}
