@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${montserratLight.variable} ${mynerve.variable}`}
+        className={`${montserrat.variable} ${montserratLight.variable}`}
         style={{
           display: "flex",
           justifyContent: "center",
