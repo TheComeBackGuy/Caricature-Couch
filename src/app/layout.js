@@ -10,7 +10,8 @@ import { Suspense } from "react";
 import Loading from "./Loading";
 
 const mynerve = Mynerve({
-  weight: "400",
+  subsets: ["latin", "latin-ext"], // Example: Include Latin and Latin Extended subsets
+  weight: "400", // Example: Specify the weight
 });
 
 const montserrat = Montserrat({
