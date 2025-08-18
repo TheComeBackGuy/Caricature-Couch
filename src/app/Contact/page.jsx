@@ -105,7 +105,7 @@ export default function Contact() {
             <label>
               Details
               <textarea
-                name="Details"
+                name="details"
                 type="textbox"
                 value={details}
                 onChange={(e) => {
