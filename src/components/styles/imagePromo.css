@@ -8,18 +8,18 @@
   overflow: hidden;
   background-color: var(--rainbowYellow);
   width: 100%;
-  height: fit-content;
+  height: auto;
   border-radius: 20px;
 }
 
 .container {
   display: flex;
-  flex-flow: column nowrap;
+  /* flex-flow: column nowrap; */
   /* flex-basis: 29%; */
   background-color: var(--rainbowRed);
   border-radius: 20px;
   text-align: left;
-  max-width: 500px;
+  /* max-width: 500px; */
   overflow: hidden;
   flex: 1 3 30%;
   @media (max-width: 840px) {
@@ -49,4 +49,18 @@
 .container-inline:nth-child(odd) {
   display: flex;
   flex-flow: row-reverse nowrap;
+}
+
+/* THEMES */
+.inline-flip {
+  flex-flow: row nowrap;
+  flex-basis: 100%;
+  width: 100%;
+  @media (max-width: 600px) {
+    flex-flow: column nowrap;
+  }
+}
+
+.column {
+  flex-flow: column nowrap;
 }

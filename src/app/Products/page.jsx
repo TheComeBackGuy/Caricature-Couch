@@ -39,7 +39,7 @@ export default function Products() {
           and we do, we doodle a lot. Now it's time to share those doodles and
           ideas with you.
         </p>
-      </div>{" "}
+      </div>
       <div className="promoContainer">
         {/* <CopiesPromo /> */}
         <ImagePromo
@@ -49,13 +49,14 @@ export default function Products() {
           hdr="Caricature Copies"
           p="Okay, we're being dramatic. We just love that we can now give you high-quality copies of your caricatures."
           inline
-        />{" "}
+        />
         <ImagePromo
           theme="white"
           img="/images/caricatureStickerPromo.png"
           alt="A sample of sticker sheets"
           hdr="Stickers of you"
           p="Our coolest add-on is your very own sticker sheet! Get a Choo Choo sticker, Caricature  Couch sticker, and two stickers of your caricature."
+          inline
         />
         <ImagePromo
           theme="white"

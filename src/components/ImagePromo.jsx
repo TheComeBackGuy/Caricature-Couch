@@ -7,8 +7,6 @@ export default function ImagePromo({ img, alt, hdr, p, theme, inline }) {
   let hdrColor;
   let pColor;
   let bgColor;
-  let styles;
-  let imageStyles;
 
   switch (theme) {
     case !theme:
@@ -54,27 +52,20 @@ export default function ImagePromo({ img, alt, hdr, p, theme, inline }) {
       break;
   }
 
-  if (inline) {
-    styles = {
-      backgroundColor: bgColor,
-      borderColor: hdrColor,
-      flexFlow: "row nowrap",
-      minWidth: "100%",
-    };
-    theme = "white";
-    imageStyles = {
-      minWidth: "50%",
-      height: "100%",
-    };
-  } else {
-    styles = {
-      backgroundColor: bgColor,
-    };
-    imageStyles = {};
+  function flipCard() {
+    if (inline) {
+      return "inline-flip";
+    } else {
+      return "column";
+    }
   }
+
   return (
-    <div className="container" style={styles}>
-      <div className="promoImage" style={imageStyles}>
+    <div
+      className={`container ${flipCard()}`}
+      style={{ backgroundColor: bgColor }}
+    >
+      <div className="promoImage">
         <Image
           src={img}
           alt={alt}

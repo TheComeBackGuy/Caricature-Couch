@@ -9,11 +9,23 @@
 
 .deets {
   display: flex;
+  width: 100%;
   flex-flow: row nowrap;
+  align-items: center;
   justify-content: space-evenly;
+  /* border: 2px solid green; */
+  @media (max-width: 760) {
+    flex-flow: column nowrap;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .deets > div {
+  display: flex;
+  flex-flow: column nowrap;
   background-color: var(--white);
   padding: 20px 30px;
   border-radius: 4px;
