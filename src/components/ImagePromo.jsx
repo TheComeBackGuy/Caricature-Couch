@@ -75,7 +75,23 @@ export default function ImagePromo({ img, alt, hdr, p, theme, inline }) {
   return (
     <div className="container" style={styles}>
       <div className="promoImage" style={imageStyles}>
-        <Image src={img} alt={alt} fill style={{ objectFit: "cover" }} />
+        <Image
+          src={img}
+          alt={alt}
+          fill
+          style={{ objectFit: "cover" }}
+          sizes="(min-width: 1440px) 500px, (min-width: 920px) calc(45.8vw - 150px), (min-width: 720px) calc(49.44vw - 125px), (min-width: 420px) calc(50vw - 105px), 95px"
+          srcSet="
+		/_next/image?url=%2Fimages%2Fcopies2.jpg&w=640&q=75 640w,
+		/_next/image?url=%2Fimages%2Fcopies2.jpg&w=750&q=75 750w,
+		/_next/image?url=%2Fimages%2Fcopies2.jpg&w=828&q=75 828w,
+		/_next/image?url=%2Fimages%2Fcopies2.jpg&w=1080&q=75 1080w,
+		/_next/image?url=%2Fimages%2Fcopies2.jpg&w=1200&q=75 1200w,
+		/_next/image?url=%2Fimages%2Fcopies2.jpg&w=1920&q=75 1920w,
+		/_next/image?url=%2Fimages%2Fcopies2.jpg&w=2048&q=75 2048w,
+		/_next/image?url=%2Fimages%2Fcopies2.jpg&w=3840&q=75 3840w
+	"
+        />
       </div>
       <div className="textArea">
         <h2 style={{ color: hdrColor }}>{hdr}</h2>

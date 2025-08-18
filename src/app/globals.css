@@ -33,7 +33,7 @@ body {
 }
 
 body {
-  text-align: center;
+  /* text-align: center; */
   color: var(--tanDarkText);
   background: var(--tanLight);
   font-family: "Montserrat", Arial, Helvetica, sans-serif, "mynerve-regular";
@@ -42,6 +42,7 @@ body {
   min-width: 400px;
   min-height: 100%;
   height: auto;
+  background-image: url("../../public/images/bg.jpg");
   /* border: 5px dotted red; */
 }
 
@@ -99,6 +100,7 @@ a {
   /* padding-right: 10px; */
   text-align: right;
 }
+
 .pageHeader {
   /* font-size: 3em; */
   text-align: center;
@@ -136,7 +138,12 @@ h2 {
   overflow: visible;
 }
 
-.polaroidContainer > div:nth-child(even) {
+.polaroidContainer > div:nth-child(2) {
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+.polaroidContainer > div:nth-child(3) {
   @media (max-width: 560px) {
     display: none;
   }

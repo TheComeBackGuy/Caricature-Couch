@@ -1,7 +1,7 @@
 footer {
   /* display: flex; */
   /* align-items: flex-end; */
-  border: 2px dotted red;
+  /* border: 2px dotted red; */
   /* flex-flow: column nowrap; */
   align-self: flex-end;
   justify-self: flex-end;

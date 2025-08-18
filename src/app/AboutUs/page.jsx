@@ -1,7 +1,6 @@
 import React from "react";
 import "../globals.css";
 import Polaroid from "@/components/Polaroid";
-import PromoSmall from "@/components/PromoSmall";
 
 export default function AboutUs() {
   return (
@@ -17,12 +16,19 @@ export default function AboutUs() {
           text="Me and Mandy the day before announcing the opening of the store"
         />
         <Polaroid
+          rotate={0}
+          z={2}
+          image="dinner"
+          imageAlt={"Three smiling people having dinner"}
+          text="Sometimes, the best times were after a busy show"
+        />
+        <Polaroid
           rotate={5}
           z={2}
-          image="team"
-          imageAlt={"Our booth in the lobby"}
-          text="Find our booth inside the lobby of the Choo Choo"
-        />
+          image="krystalMe"
+          imageAlt={"Two people making silly faces"}
+          text="Just a couple of goobs. "
+        />{" "}
       </div>
       <div className="contentContainer" style={{ marginTop: "40px" }}>
         <h1>
@@ -44,8 +50,12 @@ export default function AboutUs() {
           we could really use it.
         </p>
 
-        <div>
+        <div style={{ marginTop: "40px" }}>
           <h2>We do not use AI</h2>
+          <cite style={{ color: "var(--rainbowRed)" }}>
+            We do not use any kind of machine-learning or "ai" prompting to
+            produce our art.{" "}
+          </cite>
           <p>
             While we use digital programs like Clip Studio Paint to produce a
             lot of our prints and stickers, these are drawing programs. All our
@@ -54,18 +64,13 @@ export default function AboutUs() {
             paper. We use digital programs to give us the bold lines and color
             that we love.
           </p>
-          <cite style={{ color: "var(--rainbowRed)" }}>
-            At no time do we use any kind of machine-learning or "ai" prompting
-            to produce our art.{" "}
-          </cite>
         </div>
-        <div>
+        <div style={{ marginTop: "40px" }}>
           <h2>We welcome all those who welcome all</h2>
           <p>
-            Our enviroment is one of inclusion and welcomeness. Our artists come
-            from lives lived in the minority and we are comittted to supporting
-            these groups. We are LGBT+ friendly and also make accomadations for
-            those on the autism spectrum, including fidget and tactile toys.
+            Our enviroment is one of inclusion and welcomeness. If you are
+            entering our space, know that our goal is to make all those here
+            feel welcomed and comfortable. We expect you to honor that as well.
           </p>
         </div>
       </div>

@@ -17,7 +17,7 @@ export default function Products() {
           text="Our guests are always walking away smiling."
         />
         <Polaroid
-          rotate={5}
+          rotate={0}
           z={2}
           image="guest5"
           imageAlt={"A couple happily displaying their drawing"}
@@ -28,7 +28,7 @@ export default function Products() {
           z={2}
           image="guest6"
           imageAlt={"A couple happily displaying their drawing"}
-          text="We love drawing couples!"
+          text="We're all about drawing people together."
         />
       </div>
       <div style={{ margin: "40px 20px" }}>

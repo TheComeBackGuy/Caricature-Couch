@@ -16,10 +16,17 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          This site has been lovingly crafted by the person who you will likely
-          get drawn by
+          This site has been lovingly crafted by Dennis Hart. Please look but
+          don't touch.
         </div>
-        <div>Be Kind. Fight Evil.</div>
+        <div>
+          <p>
+            Open 10am-8pm
+            <br />
+            CLOSED TUESDAYS
+          </p>
+          <p>Be Kind. Fight Evil.</p>
+        </div>
       </div>
     </footer>
   );

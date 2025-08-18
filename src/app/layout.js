@@ -1,14 +1,13 @@
-import { Geist, Geist_Mono, Montserrat, Mynerve } from "next/font/google";
+import { Montserrat, Mynerve } from "next/font/google";
 import "../app/globals.css";
-import Pin from "./images/pin.gif";
-import Image from "next/image";
 import FooterCouch from "@/components/FooterCouch";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
 import MobileMenu from "@/components/MobileMenu";
 import Rainbow from "@/components/Rainbow";
 import Header from "@/components/Header";
-import Grump from "../../public/images/sticker-grump.png";
+import { Suspense } from "react";
+import Loading from "./Loading";
 
 const mynerve = Mynerve({
   weight: "400",
@@ -20,16 +19,6 @@ const montserrat = Montserrat({
 });
 const montserratLight = Montserrat({
   weight: "200",
-  subsets: ["latin"],
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -58,7 +47,8 @@ export default function RootLayout({ children }) {
             </>
             <div className="contentArea">
               <Header />
-              {children}
+              <Suspense fallback={<Loading />}>{children}</Suspense>
+              {/* <NavigationEvents /> */}
             </div>
             <Rainbow side="right" />
           </div>

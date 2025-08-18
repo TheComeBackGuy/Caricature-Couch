@@ -31,8 +31,14 @@ export default function Contact() {
           image="dennis"
           imageAlt={"Dennis sitting at his easel drawing caricartures"}
           text="Catching Dennis off-guard at a wedding."
+        />{" "}
+        <Polaroid
+          rotate={0}
+          z={0}
+          image="couple"
+          imageAlt={"A picture of two people making funny faces"}
+          text="We are just a couple of goofballs with bills."
         />
-
         <Polaroid
           rotate={5}
           z={2}
@@ -54,7 +60,7 @@ export default function Contact() {
         </p>
         <p>
           If you would like to setup an appointment please reach out here as
-          well.{" "}
+          well.
         </p>
         <form
           // style={{ display: submitted ? "none" : "flex" }}

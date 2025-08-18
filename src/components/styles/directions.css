@@ -6,3 +6,15 @@
   z-index: 500;
   /* margin: 0; */
 }
+
+.deets {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+.deets > div {
+  background-color: var(--white);
+  padding: 20px 30px;
+  border-radius: 4px;
+}

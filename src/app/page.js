@@ -5,6 +5,7 @@ import "../app/globals.css";
 import Stars from "@/components/Stars";
 import CopiesPromo from "@/components/CopiesPromo";
 import ImagePromo from "@/components/ImagePromo";
+import Hours from "@/components/Hours";
 
 export default function Home() {
   return (
@@ -17,17 +18,24 @@ export default function Home() {
           imageAlt={
             "Two poeple smiling in front of the Chattanooga Choo Choo building"
           }
-          text="Me and Mandy the day before announcing the opening of the store"
+          text="Honestly, our guests are the best people!"
+        />
+        <Polaroid
+          rotate={0}
+          z={2}
+          image="wall"
+          imageAlt={"the back wall"}
+          text="The wall is looking pretty great."
         />
         <Polaroid
           rotate={5}
           z={2}
           image="guest3"
           imageAlt={"Our booth in the lobby"}
-          text="Find our booth inside the lobby of the Choo Choo"
-        />
+          text="Knights and princesses? We can do that!"
+        />{" "}
       </div>
-
+      {/* <Hours /> */}
       <Stars />
       <div className="promoContainer">
         <ImagePromo
@@ -35,7 +43,7 @@ export default function Home() {
           img="/images/copies2.jpg"
           alt="A printer atatcks an artist with copies"
           hdr="Okay, We're being dramatic"
-          p="  We just love that we can now give you high-quality copies of your
+          p="We just love that we can now give you high-quality copies of your
           caricatures."
         />
         <ImagePromo
