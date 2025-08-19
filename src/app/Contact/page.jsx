@@ -22,6 +22,27 @@ export default function Contact() {
     console.log("submit");
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    if (formSubmitted) {
+      console.log(formResult);
+      setErrorMessage("");
+      fetch("/__contact.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": event.target.getAttribute("name"),
+          ...formResult,
+        }),
+      })
+        .then(() => {
+          // navigate("/thank-you/");
+        })
+        .catch((error) => alert(error));
+    }
+  }
+
   return (
     <>
       <div className="polaroidContainer">
@@ -62,6 +83,14 @@ export default function Contact() {
           If you would like to setup an appointment please reach out here as
           well.
         </p>
+
+        <h2>Alert</h2>
+        <p>
+          It has come to my attention that the form is not working yet. Please
+          email dennis@hartsyfartsy.com with your questions in the meantime
+        </p>
+
+        {/*         
         <form
           // style={{ display: submitted ? "none" : "flex" }}
           name="Couch Contact"
@@ -120,7 +149,7 @@ export default function Contact() {
               Submit
             </button>
           </div>
-        </form>
+        </form> */}
       </div>
     </>
   );
