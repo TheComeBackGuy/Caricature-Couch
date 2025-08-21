@@ -23,33 +23,23 @@ export default function Rainbow({ side }) {
         style={{
           backgroundColor: "var(--rainbowBlue)",
         }}
-      >
-        x
-      </div>
+      ></div>
       <div
         className="rainbowStripe"
         style={{ backgroundColor: "var(--rainbowTurquoise)" }}
-      >
-        x
-      </div>
+      ></div>
       <div
         className="rainbowStripe"
         style={{ backgroundColor: "var(--rainbowYellow)" }}
-      >
-        x
-      </div>
+      ></div>
       <div
         className="rainbowStripe"
         style={{ backgroundColor: "var(--rainbowOrange)" }}
-      >
-        x
-      </div>
+      ></div>
       <div
         className="rainbowStripe"
         style={{ backgroundColor: "var(--rainbowRed)" }}
-      >
-        x
-      </div>
+      ></div>
     </div>
   );
 }
