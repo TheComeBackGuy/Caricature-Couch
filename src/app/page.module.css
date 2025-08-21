@@ -21,25 +21,30 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  /* justify-items: stretch; */
-  /* align-self: stretch; */
   height: 100%;
   width: 100%;
-  /* min-width: 100%; */
-  /* max-width: 1500px; */
-  /* min-height: inherit; */
   overflow: hidden;
   background-image: url("images/top-boxes.gif");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
   min-width: 300px;
-
-  /* border: 3px solid purple; */
 }
 
-.footerContainer {
-  /* max-width: 1500px; */
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("images/footer-boxes.gif");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 300px;
+
+  /* border: 3px solid purple; */
 }
 
 .imageContainer {

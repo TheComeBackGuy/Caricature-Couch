@@ -78,9 +78,10 @@ a {
   height: inherit;
   align-self: stretch;
   justify-self: stretch;
+  max-width: fit-content;
   gap: 5%;
   z-index: 1;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .rainbowStripe {

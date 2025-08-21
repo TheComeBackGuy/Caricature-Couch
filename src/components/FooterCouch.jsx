@@ -3,10 +3,10 @@ import Couch from "../app/images/footer-couch.png";
 import "./styles/couch.css";
 import Image from "next/image";
 import Rainbow from "./Rainbow";
-
+import styles from "../app/page.module.css";
 export default function FooterCouch() {
   return (
-    <div className="couchContainer">
+    <div className={styles.footer}>
       <div style={{ height: "100%" }}>
         <Rainbow side="left" />
       </div>

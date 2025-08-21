@@ -1,8 +1,5 @@
 footer {
-  /* display: flex; */
-  /* align-items: flex-end; */
-  /* border: 2px dotted red; */
-  /* flex-flow: column nowrap; */
+  display: block;
   align-self: flex-end;
   justify-self: flex-end;
   height: fit-content;
