@@ -74,6 +74,7 @@ a {
 .rainbowContainer {
   display: flex;
   width: fit-content;
+  height: 100%;
   height: stretch;
   align-self: stretch;
   justify-self: stretch;
@@ -84,6 +85,8 @@ a {
 
 .rainbowStripe {
   width: 32px;
+  height: 100%;
+  height: stretch;
   @media (max-width: 900px) {
     width: 20px;
   }
