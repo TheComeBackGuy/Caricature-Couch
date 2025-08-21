@@ -80,7 +80,7 @@ a {
   justify-self: stretch;
   gap: 5%;
   z-index: 1;
-  /* border: 2px solid black; */
+  border: 2px solid black;
 }
 
 .rainbowStripe {
