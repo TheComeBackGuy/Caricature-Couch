@@ -16,6 +16,9 @@
   font-family: "Mynerve";
   font-weight: 400;
   font-style: normal;
+  @media (max-width: 600px) {
+    width: 80%;
+  }
 }
 
 .polaroidPicture {
