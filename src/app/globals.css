@@ -84,6 +84,7 @@ a {
 }
 
 .rainbowStripe {
+  display: block;
   width: 32px;
   height: 100%;
   height: stretch;
