@@ -28,7 +28,7 @@
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
-  min-width: 300px;
+  /* min-width: 300px; */
 }
 
 .footer {
@@ -42,7 +42,7 @@
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: contain;
-  min-width: 300px;
+  /* min-width: 300px; */
 
   /* border: 3px solid purple; */
 }
