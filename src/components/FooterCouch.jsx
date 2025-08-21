@@ -14,9 +14,6 @@ export default function FooterCouch() {
         <Image
           src={Couch}
           alt="the couch of the caricature couch"
-          // height={450}
-          // width={970}
-          // styles={{ objectFit: "cover" }}
           fill
           sizes="(min-width: 1580px) 1220px, (min-width: 920px) calc(90.63vw - 194px), (min-width: 720px) calc(100vw - 160px), (min-width: 420px) calc(100vw - 110px), 290px"
           srcSet="

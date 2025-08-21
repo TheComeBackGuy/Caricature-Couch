@@ -6,7 +6,7 @@ import PromoSmall from "@/components/PromoSmall";
 import ImagePromo from "@/components/ImagePromo";
 export default function Directions() {
   return (
-    <div>
+    <>
       <div className="polaroidContainer">
         <Polaroid
           rotate={-5}
@@ -91,6 +91,6 @@ export default function Directions() {
         />
       </div>
       <div></div>
-    </div>
+    </>
   );
 }
