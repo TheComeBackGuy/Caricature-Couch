@@ -7,7 +7,9 @@ import Rainbow from "./Rainbow";
 export default function FooterCouch() {
   return (
     <div className="couchContainer">
-      <Rainbow side="left" />
+      <div style={{ height: "100%" }}>
+        <Rainbow side="left" />
+      </div>
       <div className="couchImageContainer">
         <Image
           src={Couch}
@@ -29,7 +31,9 @@ export default function FooterCouch() {
 	"
         />
       </div>
-      <Rainbow side="right" />
+      <div style={{ height: "100%" }}>
+        <Rainbow side="right" />
+      </div>
     </div>
   );
 }

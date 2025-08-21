@@ -74,8 +74,8 @@ a {
 .rainbowContainer {
   display: flex;
   width: fit-content;
-  height: 100%;
-  height: stretch;
+  /* height: 100%; */
+  height: inherit;
   align-self: stretch;
   justify-self: stretch;
   gap: 5%;
