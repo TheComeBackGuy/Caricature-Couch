@@ -62,7 +62,7 @@ export default function Contact() {
   function handleSuccess() {
     console.log("Success!!");
 
-    setSubmitted(true);
+    // setSubmitted(true);
     setThankYouVisible(true);
     setTimeout(() => {
       setName("");
