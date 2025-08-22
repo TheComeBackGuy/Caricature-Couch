@@ -140,13 +140,7 @@ export default function Contact() {
               flexFlow: "row wrap",
             }}
           >
-            <p type="hidden">
-              <label>
-                Don’t fill this out if you’re human:{" "}
-                <input name="bot-field" type="text" />
-              </label>
-            </p>
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="Couch Contact" />
             <label>
               Name
               <input
@@ -182,7 +176,7 @@ export default function Contact() {
                 }}
               ></textarea>
               <cite className="error" style={{ display: warning }}>
-                Looks like you've got some missing info there.{" "}
+                Looks like you've got some missing info there.
               </cite>
             </label>{" "}
             <button className="submit" submit="true">
