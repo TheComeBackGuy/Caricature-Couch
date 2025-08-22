@@ -10,6 +10,7 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [details, setDetails] = useState("");
   const [warning, setWarning] = useState("none");
+  const [thankYouVisible, setThankYouVisible] = useState(false);
   function handleSubmit(e) {
     if (name.length == 0 || email.length == 0 || details.length == 0) {
       setWarning("block");
@@ -21,6 +22,12 @@ export default function Contact() {
 
     console.log("submit");
   }
+
+  const formResult = {
+    name,
+    email,
+    details,
+  };
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -37,10 +44,42 @@ export default function Contact() {
         }),
       })
         .then(() => {
+          handleSuccess();
+
           // navigate("/thank-you/");
         })
         .catch((error) => alert(error));
     }
+  }
+
+  function handleSuccess() {
+    console.log("Success!!");
+
+    setSubmitted(true);
+    setThankYouVisible(true);
+    setTimeout(() => {
+      setName("");
+      setEmail("");
+      setDetails("");
+      setWarning("");
+      //       <!-- Event snippet for Submit Contact Form conversion page
+      // In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+      // <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-1008987808/gIjQCMm3gtwDEKDdj-ED",
+          event_callback: callback,
+        });
+        return false;
+      }
+      gtag_report_conversion();
+      // </script>
+    }, 4000);
   }
 
   return (
@@ -90,9 +129,7 @@ export default function Contact() {
           email dennis@hartsyfartsy.com with your questions in the meantime
         </p>
 
-        {/*         
         <form
-          // style={{ display: submitted ? "none" : "flex" }}
           name="Couch Contact"
           method="POST"
           data-netlify="true"
@@ -103,9 +140,14 @@ export default function Contact() {
             style={{
               display: "flex",
               flexFlow: "row wrap",
-              // justifyContent: "space-evenly",
             }}
           >
+            <p class="hidden">
+              <label>
+                Don’t fill this out if you’re human:{" "}
+                <input name="bot-field" type="text" />
+              </label>
+            </p>
             <input type="hidden" name="form-name" value="contact" />
             <label>
               Name
@@ -149,7 +191,8 @@ export default function Contact() {
               Submit
             </button>
           </div>
-        </form> */}
+        </form>
+        {<div style={{ display: thankYouVisible ? "flex" : "none" }}></div>}
       </div>
     </>
   );
