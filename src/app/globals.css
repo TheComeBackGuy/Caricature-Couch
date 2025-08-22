@@ -45,7 +45,7 @@ body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif, "Mynerve";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-width: 400px;
+  /* min-width: 400px; */
   min-height: 100%;
   height: auto;
   background-image: url("../../public/images/bg.jpg");
