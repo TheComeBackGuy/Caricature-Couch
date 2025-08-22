@@ -142,7 +142,7 @@ export default function Contact() {
               flexFlow: "row wrap",
             }}
           >
-            <p class="hidden">
+            <p type="hidden">
               <label>
                 Don’t fill this out if you’re human:{" "}
                 <input name="bot-field" type="text" />
