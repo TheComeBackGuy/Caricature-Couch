@@ -11,6 +11,7 @@ export default function Contact() {
   const [details, setDetails] = useState("");
   const [warning, setWarning] = useState("none");
   const [thankYouVisible, setThankYouVisible] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   function handleSubmit(e) {
     if (name.length == 0 || email.length == 0 || details.length == 0) {
       setWarning("block");
