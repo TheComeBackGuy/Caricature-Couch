@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../globals.css";
 import Polaroid from "@/components/Polaroid";
 import PromoSmall from "@/components/PromoSmall";
@@ -12,23 +12,24 @@ export default function Contact() {
   const [warning, setWarning] = useState("none");
   const [thankYouVisible, setThankYouVisible] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  function handleSubmit(e) {
-    if (name.length == 0 || email.length == 0 || details.length == 0) {
-      setWarning("block");
-      e.preventDefault();
-      console.log("you failed");
-    } else {
-      setWarning("none");
-    }
-
-    console.log("submit");
-  }
+  const [isDisabled, setIsDisabled] = useState(true);
+  useEffect(() => {}, []);
 
   const formResult = {
     name,
     email,
     details,
   };
+
+  useEffect(() => {
+    if (name.length == 0 || email.length == 0 || details.length == 0) {
+      setIsDisabled(true);
+      console.log("still nothing");
+    } else {
+      setIsDisabled(false);
+      setWarning("none");
+    }
+  }, [name.length, email.length, details.length]);
 
   function encode(data) {
     return Object.keys(data)
@@ -117,7 +118,7 @@ export default function Contact() {
       <div className="contentContainer" style={{ marginTop: "40px" }}>
         <h1 className="pageHeader">Reaching out is as Easy as an email</h1>
         <p>
-          Please give us as many details as you can regaurding your question or
+          Please give us as many details as you can reguarding your question or
           comment.
         </p>
         <p>
@@ -130,11 +131,11 @@ export default function Contact() {
           well.
         </p>
 
-        <h2>Alert</h2>
+        {/* <h2>Alert</h2>
         <p>
           It has come to my attention that the form is not working yet. Please
           email dennis@hartsyfartsy.com with your questions in the meantime
-        </p>
+        </p> */}
 
         <form
           name="Couch Contact"
@@ -151,7 +152,7 @@ export default function Contact() {
           >
             <input type="hidden" name="form-name" value="Couch Contact" />
             <label>
-              Name
+              Name:
               <input
                 name="name"
                 type="text"
@@ -162,7 +163,7 @@ export default function Contact() {
               ></input>
             </label>{" "}
             <label>
-              Email
+              Email:
               <input
                 name="email"
                 type="text"
@@ -175,7 +176,7 @@ export default function Contact() {
           </div>
           <div className="commentBox">
             <label>
-              Details
+              Details:
               <textarea
                 name="details"
                 type="textbox"
@@ -184,16 +185,16 @@ export default function Contact() {
                   setDetails(e.target.value);
                 }}
               ></textarea>
-              <cite className="error" style={{ display: warning }}>
+              {/* <cite className="error" style={{ display: warning }}>
                 Looks like you've got some missing info there.
-              </cite>
+              </cite> */}
             </label>{" "}
-            <button className="submit" submit="true">
+            <button className="submit" disabled={isDisabled} submit="true">
               Submit
             </button>
           </div>
         </form>
-        {<div style={{ display: thankYouVisible ? "flex" : "none" }}></div>}
+        {<div style={{ display: thankYouVisible ? "flex" : "none" }} />}
       </div>
     </>
   );

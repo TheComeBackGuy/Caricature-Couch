@@ -232,6 +232,9 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+button:disabled {
+  background-color: transparent;
+}
 
 .promoContainer {
   display: flex;
@@ -251,4 +254,8 @@ button {
 .contentContainer {
   padding: 0 20px;
   gap: 30px;
+}
+
+label {
+  margin-right: 20px;
 }
