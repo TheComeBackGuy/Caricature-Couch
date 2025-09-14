@@ -36,7 +36,6 @@ export default function RootLayout({ children }) {
         style={{
           display: "flex",
           justifyContent: "center",
-          // border: "5px dashed black",
           backgroundColor: "var(--tanShadow)",
         }}
       >
@@ -49,12 +48,11 @@ export default function RootLayout({ children }) {
             <div className="contentArea">
               <Header />
               <Suspense fallback={<Loading />}>{children}</Suspense>
-              {/* <NavigationEvents /> */}
             </div>
             <Rainbow side="right" />
           </div>
           <div className={styles.footerContainer}>
-            <FooterCouch />
+            {/* <FooterCouch /> */}
             <Footer />
           </div>
         </div>
