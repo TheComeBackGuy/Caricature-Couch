@@ -32,8 +32,15 @@ export default function Directions() {
       </div>
       <div className="contentContainer" style={{ margin: "80px 0" }}>
         <div>
-          <h1 className="pageHeader">The Deets</h1>
+          <h1 className="pageHeader">When's and Where's</h1>
           <div className="deets">
+            <div>
+              <h2>Operating Hours</h2>
+              <p>
+                Open 10am - 8pm <br />
+                Friday - Sunday
+              </p>
+            </div>
             <div className="addy">
               <a href="https://maps.app.goo.gl/PP5UjDjR8qpKV76w9">
                 <h2>Address</h2>
@@ -43,13 +50,6 @@ export default function Directions() {
                   Chatttanooga, TN 37405
                 </p>
               </a>
-            </div>
-            <div>
-              <h2>Operating Hours</h2>
-              <p>
-                Open 10am - 8pm <br />
-                CLOSED TUESDAYS
-              </p>
             </div>
           </div>
         </div>

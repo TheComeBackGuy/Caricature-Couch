@@ -1,0 +1,44 @@
+form {
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0px 4px 3px var(--tanDark);
+  color: var(--black);
+
+  overflow: visible;
+  margin-bottom: 10px;
+  border: 3px dashed var(--rainbowBlue);
+}
+
+p {
+  margin-bottom: 20px;
+}
+form > h2 {
+  color: var(--rainbowRed);
+}
+
+input {
+  margin: 0 10px;
+  border: 1px solid var(--rainbowYellow);
+  background-color: var(--white);
+}
+
+textarea {
+  border: 1px solid var(--rainbowYellow);
+}
+
+.timeButton {
+  background-color: var(--tan);
+  color: var(--rainbowOrange);
+  cursor: pointer;
+  margin: 0;
+}
+
+.timeButtonContainer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 20px;
+}

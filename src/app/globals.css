@@ -2,9 +2,11 @@
   --background: #ffffff;
   --foreground: #171717;
 
+  --whiteExtra: #f7f1e7;
   --white: #f9efdc;
   --black: #2b2a2a;
   --blackRed: #6d5c4b;
+  --tanLighter: #f8eeda;
   --tanLight: #f3e4c5;
   --tanMid: #efd09a;
   --tanShadow: #e1ad74;
@@ -73,6 +75,7 @@ a {
 
 .rainbowContainer {
   display: flex;
+  position: relative;
   width: fit-content;
   /* height: 100%; */
   height: inherit;
@@ -80,7 +83,7 @@ a {
   justify-self: stretch;
   max-width: fit-content;
   gap: 5%;
-  z-index: 1;
+  z-index: 0;
   /* border: 2px solid black; */
 }
 
@@ -106,7 +109,8 @@ a {
   align-items: flex-start;
   width: 100%;
   height: fit-content;
-  overflow: visible;
+  /* overflow: clip; */
+
   gap: 20px;
 }
 
@@ -144,12 +148,14 @@ h2 {
 
 .polaroidContainer {
   display: flex;
+  position: relative;
   margin-top: -40px;
   margin-left: -10%;
   flex-flow: row nowrap;
   width: 120%;
   /* border: 2px solid red; */
   overflow: visible;
+  z-index: 2;
 }
 
 .polaroidContainer > div:nth-child(2) {

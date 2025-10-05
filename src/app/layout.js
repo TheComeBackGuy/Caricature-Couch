@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
             <Rainbow side="right" />
           </div>
           <div className={styles.footerContainer}>
-            {/* <FooterCouch /> */}
+            <FooterCouch />
             <Footer />
           </div>
         </div>

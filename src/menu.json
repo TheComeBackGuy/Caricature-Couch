@@ -1,17 +1,23 @@
 [
-{
-    "title":"Contact",
-    "url": "Contact"
-},
-{
-"title":"About Us",
-    "url": "AboutUs"
-},
-{
-"title":"Visit Us",
-    "url": "VisitUs"
-},
-{
-"title":"Products",
+    
+      {
+        "title": "Visit Us",
+        "url": "VisitUs"
+      },
+  {
+    "title": "Appointments",
+    "url": "Appointments"
+  },
+  {
+    "title": "Products",
     "url": "Products"
-}]
+  },
+  {
+    "title": "Contact",
+    "url": "Contact"
+  },
+  {
+    "title": "About Us",
+    "url": "AboutUs"
+  }
+]

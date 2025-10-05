@@ -27,7 +27,7 @@ export default function Rainbow({ side }) {
             height: entry.contentRect.height,
           });
         }
-        console.log(divSize);
+        // console.log(divSize);
       });
       resizeObserver.observe(divRef.current);
       return () => {
@@ -36,7 +36,7 @@ export default function Rainbow({ side }) {
     }
   }, []);
 
-  console.log(divSize);
+  // console.log(divSize);
 
   return (
     <div
@@ -44,7 +44,7 @@ export default function Rainbow({ side }) {
       className="rainbowContainer"
       style={{ flexFlow: whichSide(side) }}
     >
-      <StickerColumn divSizes={divSize} />
+      {/* <StickerColumn side={side} divSizes={divSize} /> */}
       <div
         className="rainbowStripe"
         style={{
