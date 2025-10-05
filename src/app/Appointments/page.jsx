@@ -16,7 +16,7 @@ export default function Contact() {
   const [isDisabled, setIsDisabled] = useState(true);
   const [dates, setDates] = useState([]);
   const [numberOfFaces, setNumberOfFaces] = useState(1);
-  const [colorStyle, setColorStyle] = useState("");
+  const [colorStyle, setColorStyle] = useState("One-Color Shaded");
   const [appointmentDate, setAppointmentDate] = useState("");
   const [appointmentStartTime, setAppointmentStartTime] = useState("");
   // days
