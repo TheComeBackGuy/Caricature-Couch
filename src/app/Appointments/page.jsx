@@ -11,7 +11,6 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [details, setDetails] = useState("");
   const [warning, setWarning] = useState("none");
-  const [thankYouVisible, setThankYouVisible] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [isDisabled, setIsDisabled] = useState(true);
   const [dates, setDates] = useState([]);
@@ -19,6 +18,9 @@ export default function Contact() {
   const [colorStyle, setColorStyle] = useState("One-Color Shaded");
   const [appointmentDate, setAppointmentDate] = useState("");
   const [appointmentStartTime, setAppointmentStartTime] = useState("");
+  const [formDisplay, setFormDisplay] = useState("flex");
+  const [thankYouDisplay, setThankYouDisplay] = useState("none");
+
   // days
 
   const appointmentTimes = [
@@ -55,14 +57,19 @@ export default function Contact() {
   };
 
   useEffect(() => {
-    if (name.length == 0 || email.length == 0 || details.length == 0) {
+    if (
+      name.length == 0 ||
+      email.length == 0 ||
+      appointmentDate == "" ||
+      appointmentStartTime == ""
+    ) {
       setIsDisabled(true);
       // console.log("still nothing");
     } else {
       setIsDisabled(false);
       setWarning("none");
     }
-  }, [name.length, email.length, details.length]);
+  }, [name.length, email.length, appointmentDate, appointmentStartTime]);
 
   function encode(data) {
     return Object.keys(data)
@@ -97,12 +104,9 @@ export default function Contact() {
     console.log("Success!!");
 
     // setSubmitted(true);
-    setThankYouVisible(true);
+    setFormDisplay("none");
+    setThankYouDisplay("flex");
     setTimeout(() => {
-      setName("");
-      setEmail("");
-      setDetails("");
-      setWarning("");
       //       <!-- Event snippet for Submit Contact Form conversion page
       // In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
       // <script>
@@ -177,7 +181,7 @@ export default function Contact() {
           If you need to reschedule for any reason, please email us. We will
           work with you on a new appointment. It is important to know your
           initial desposit will be lost and we will ask for an additional
-          deposit for your new appointment.{" "}
+          deposit for your new appointment.
         </p>
         <h2> Cancelling</h2>
         <p>
@@ -185,12 +189,24 @@ export default function Contact() {
           will be lost.
         </p>
 
+        <div className="intakeForm" style={{ display: thankYouDisplay }}>
+          <h1>Thanks, {name}!</h1>
+          <>
+            <p>
+              We're super excited to meet and draw you! We're often able to
+              respond within 24 hours. So, hang tight!{" "}
+            </p>
+            <cite>-Dennis Hart</cite>
+          </>
+        </div>
         <form
           name="Couch Appointments"
+          className="intakeForm"
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
+          style={{ display: formDisplay }}
         >
           <h1>Appointment Intake Form</h1>
           <div
@@ -307,12 +323,21 @@ export default function Contact() {
                 Looks like you've got some missing info there.
               </cite> */}
             </label>{" "}
+            <div className="review">
+              <h2>{name}</h2>
+              {email}
+              <br />
+              Drawing {numberOfFaces} subjects in {colorStyle}.
+              <br />
+              Meeting on {appointmentDate} at {appointmentStartTime}.
+              <p>Notes: {details}</p>
+            </div>
             <button className="submit" disabled={isDisabled} submit="true">
               Submit
             </button>
           </div>
         </form>
-        {<div style={{ display: thankYouVisible ? "flex" : "none" }} />}
+        {/* {<div style={{ display: thankYouVisible ? "flex" : "none" }} />} */}
       </div>
     </>
   );

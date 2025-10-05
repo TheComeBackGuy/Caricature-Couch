@@ -1,4 +1,4 @@
-form {
+.intakeForm {
   padding: 20px;
   background-color: var(--white);
   border-radius: 15px;
@@ -33,6 +33,11 @@ textarea {
   cursor: pointer;
   margin: 0;
 }
+input[type="button"]:focus {
+  background-color: darkblue;
+  color: white;
+  border-color: darkgray;
+}
 
 .timeButtonContainer {
   display: flex;
@@ -41,4 +46,14 @@ textarea {
   justify-content: flex-start;
   gap: 15px;
   padding: 20px;
+}
+
+.review {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: var(--tanLight);
+  color: var(--black);
 }
