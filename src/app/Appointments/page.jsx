@@ -241,6 +241,7 @@ export default function Contact() {
                 type="radio"
                 name="style"
                 value="One-Color Shaded"
+                checked={topping === "One-Color Shaded"}
                 onChange={(e) => {
                   setColorStyle(e.target.value);
                 }}
@@ -252,6 +253,7 @@ export default function Contact() {
                 type="radio"
                 name="style"
                 value="Full Color"
+                checked={topping === "Full Color"}
                 onChange={(e) => {
                   setColorStyle(e.target.value);
                 }}
