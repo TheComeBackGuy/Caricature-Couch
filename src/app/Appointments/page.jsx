@@ -77,7 +77,7 @@ export default function Contact() {
 
     console.log(formResult);
     setErrorMessage("");
-    fetch("/__contact.html", {
+    fetch("/appointments.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
