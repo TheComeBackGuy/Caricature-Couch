@@ -189,7 +189,10 @@ export default function Contact() {
           will be lost.
         </p>
 
-        <div className="intakeForm" style={{ display: thankYouDisplay }}>
+        <div
+          className="intakeForm"
+          style={{ display: thankYouDisplay, flexFlow: "column nowrap" }}
+        >
           <h1>Thanks, {name}!</h1>
           <>
             <p>
@@ -199,144 +202,149 @@ export default function Contact() {
             <cite>-Dennis Hart</cite>
           </>
         </div>
-        <form
-          name="Couch Appointments"
-          className="intakeForm"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
-          style={{ display: formDisplay }}
-        >
-          <h1>Appointment Intake Form</h1>
-          <div
-            style={{
-              display: "flex",
-              flexFlow: "row wrap",
-            }}
+        <div style={{ display: formDisplay }}>
+          <form
+            name="Couch Appointments"
+            className="intakeForm"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
           >
-            <input type="hidden" name="form-name" value="Couch Appointments" />
-            <label>
-              Name:
+            <h1>Appointment Intake Form</h1>
+            <div
+              style={{
+                display: "flex",
+                flexFlow: "row wrap",
+              }}
+            >
               <input
-                name="name"
-                type="text"
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-              ></input>
-            </label>{" "}
-            <label>
-              Email:
-              <input
-                name="email"
-                type="text"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-              ></input>
-            </label>
-            <label>
-              How many faces are we drawing? (Pets and babies count)
-              <input
-                name="numberOfFaces"
-                type="number"
-                min="1"
-                max="10"
-                value={numberOfFaces}
-                onChange={(e) => {
-                  setNumberOfFaces(e.target.value);
-                }}
+                type="hidden"
+                name="form-name"
+                value="Couch Appointments"
               />
-            </label>
-            <label>
-              One-Color Shaded $20/person
-              <input
-                type="radio"
-                name="style"
-                value="One-Color Shaded"
-                checked={colorStyle === "One-Color Shaded"}
-                onChange={(e) => {
-                  setColorStyle(e.target.value);
-                }}
-              />
-            </label>
-            <label>
-              Full Color $30/person
-              <input
-                type="radio"
-                name="style"
-                value="Full Color"
-                checked={colorStyle === "Full Color"}
-                onChange={(e) => {
-                  setColorStyle(e.target.value);
-                }}
-              />
-            </label>
-          </div>
-          <div
-            style={{ display: "block", flexFlow: "row nowrap", gap: "20px" }}
-          >
-            <label>
-              Preferred Date and Time:
-              <input
-                name="date"
-                type="date"
-                onChange={(e) => {
-                  setAppointmentDate(e.target.value);
-                }}
-              />
-            </label>
+              <label>
+                Name:
+                <input
+                  name="name"
+                  type="text"
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                ></input>
+              </label>{" "}
+              <label>
+                Email:
+                <input
+                  name="email"
+                  type="text"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                ></input>
+              </label>
+              <label>
+                How many faces are we drawing? (Pets and babies count)
+                <input
+                  name="numberOfFaces"
+                  type="number"
+                  min="1"
+                  max="10"
+                  value={numberOfFaces}
+                  onChange={(e) => {
+                    setNumberOfFaces(e.target.value);
+                  }}
+                />
+              </label>
+              <label>
+                One-Color Shaded $20/person
+                <input
+                  type="radio"
+                  name="style"
+                  value="One-Color Shaded"
+                  checked={colorStyle === "One-Color Shaded"}
+                  onChange={(e) => {
+                    setColorStyle(e.target.value);
+                  }}
+                />
+              </label>
+              <label>
+                Full Color $30/person
+                <input
+                  type="radio"
+                  name="style"
+                  value="Full Color"
+                  checked={colorStyle === "Full Color"}
+                  onChange={(e) => {
+                    setColorStyle(e.target.value);
+                  }}
+                />
+              </label>
+            </div>
+            <div
+              style={{ display: "block", flexFlow: "row nowrap", gap: "20px" }}
+            >
+              <label>
+                Preferred Date and Time:
+                <input
+                  name="date"
+                  type="date"
+                  onChange={(e) => {
+                    setAppointmentDate(e.target.value);
+                  }}
+                />
+              </label>
 
-            {/* <label>Preferred Time: </label> */}
-            <div className="timeButtonContainer">
-              {appointmentTimes.map((x, i) => {
-                return (
-                  <input
-                    name="time"
-                    type="button"
-                    className="timeButton"
-                    key={i}
-                    value={x}
-                    onMouseUp={(e) => {
-                      setAppointmentStartTime(e.target.value);
-                    }}
-                  />
-                );
-              })}
+              {/* <label>Preferred Time: </label> */}
+              <div className="timeButtonContainer">
+                {appointmentTimes.map((x, i) => {
+                  return (
+                    <input
+                      name="time"
+                      type="button"
+                      className="timeButton"
+                      key={i}
+                      value={x}
+                      onMouseUp={(e) => {
+                        setAppointmentStartTime(e.target.value);
+                      }}
+                    />
+                  );
+                })}
+              </div>
             </div>
-          </div>
-          <div className="commentBox">
-            <label>
-              Is there anything else you'd like to let us know:
-              <textarea
-                name="details"
-                type="textbox"
-                value={details}
-                onChange={(e) => {
-                  setDetails(e.target.value);
-                }}
-              ></textarea>
-              {/* <cite className="error" style={{ display: warning }}>
+            <div className="commentBox">
+              <label>
+                Is there anything else you'd like to let us know:
+                <textarea
+                  name="details"
+                  type="textbox"
+                  value={details}
+                  onChange={(e) => {
+                    setDetails(e.target.value);
+                  }}
+                ></textarea>
+                {/* <cite className="error" style={{ display: warning }}>
                 Looks like you've got some missing info there.
-              </cite> */}
-            </label>{" "}
-            <div className="review">
-              <h2>{name}</h2>
-              {email}
-              <br />
-              Drawing {numberOfFaces} subjects in {colorStyle}.
-              <br />
-              Meeting on {appointmentDate} at {appointmentStartTime}.
-              <p>Notes: {details}</p>
+                </cite> */}
+              </label>{" "}
+              <div className="review">
+                <h2>{name}</h2>
+                {email}
+                <br />
+                Drawing {numberOfFaces} subjects in {colorStyle}.
+                <br />
+                Meeting on {appointmentDate} at {appointmentStartTime}.
+                <p>Notes: {details}</p>
+              </div>
+              <button className="submit" disabled={isDisabled} submit="true">
+                Submit
+              </button>
             </div>
-            <button className="submit" disabled={isDisabled} submit="true">
-              Submit
-            </button>
-          </div>
-        </form>
+          </form>
+        </div>
         {/* {<div style={{ display: thankYouVisible ? "flex" : "none" }} />} */}
       </div>
     </>
