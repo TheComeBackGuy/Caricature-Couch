@@ -186,7 +186,7 @@ export default function Contact() {
         </p>
 
         <form
-          name="Couch Contact"
+          name="Couch Appointments"
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
@@ -199,7 +199,7 @@ export default function Contact() {
               flexFlow: "row wrap",
             }}
           >
-            <input type="hidden" name="form-name" value="Couch Contact" />
+            <input type="hidden" name="form-name" value="Couch Appointments" />
             <label>
               Name:
               <input
@@ -277,6 +277,7 @@ export default function Contact() {
               {appointmentTimes.map((x, i) => {
                 return (
                   <input
+                    name="time"
                     type="button"
                     className="timeButton"
                     key={i}
