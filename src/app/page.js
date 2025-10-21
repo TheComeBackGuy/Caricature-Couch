@@ -6,6 +6,8 @@ import Stars from "@/components/Stars";
 import CopiesPromo from "@/components/CopiesPromo";
 import ImagePromo from "@/components/ImagePromo";
 import Hours from "@/components/Hours";
+import MenuList from "@/components/MenuList";
+import Reviews from "@/components/Reviews";
 
 export default function Home() {
   return (
@@ -25,18 +27,19 @@ export default function Home() {
           z={2}
           image="wall"
           imageAlt={"the back wall"}
-          text="The wall is looking pretty great."
+          text="We can draw cute AND crazy!"
         />
         <Polaroid
-          rotate={5}
+          rotate={7}
           z={2}
           image="guest3"
           imageAlt={"Our booth in the lobby"}
-          text="Knights and princesses? We can do that!"
+          text="We adore drawing couples!"
         />{" "}
       </div>
-      {/* <Hours /> */}
-      <Stars />
+
+      <Hours />
+      {/* <Reviews /> */}
       <div className="promoContainer">
         <ImagePromo
           theme="red"
@@ -62,20 +65,6 @@ export default function Home() {
           inline
         />
       </div>
-      {/* <section className={styles.promoSmallSection}>
-        <PromoSmall
-          img={"/images/booth.png"}
-          hdr={"Our New Location"}
-          text="You no longer have to endure the chilling cold or the oppresive heat to
-            get a great caricature. We are located in the red space inside the
-            atrium of the historic Chattanooga Choo Choo."
-        />
-        <PromoSmall
-          img={"/images/illustration-printer.gif"}
-          hdr="We make Copies"
-          text="With our amazing new printer, we can now make copies of your drawing. So, whether it's so you can send it to that picture-hungry relative or because you and your travelling companion are going in different directions.  "
-        />
-      </section> */}
     </>
   );
 }

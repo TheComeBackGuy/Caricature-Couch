@@ -2,7 +2,7 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  --whiteExtra: #f7f1e7;
+  --whiter: #f7f1e7;
   --white: #f9efdc;
   --black: #2b2a2a;
   --blackRed: #6d5c4b;
@@ -50,7 +50,6 @@ body {
   /* min-width: 400px; */
   min-height: 100%;
   height: auto;
-  background-image: url("../../public/images/bg.jpg");
   /* border: 5px dotted red; */
 }
 

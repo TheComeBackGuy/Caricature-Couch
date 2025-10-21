@@ -7,9 +7,10 @@ export default function Hours() {
     padding: "5px",
     alignSelf: "center",
     color: "var(--white)",
-    backgroundColor: "var(--rainbowRed)",
+    backgroundColor: "var(--rainbowTurquoise)",
     fontWeight: "600",
     borderRadius: "4px",
+    border: "5px solid var(--whiter)",
   };
   const h2Style = {
     borderTop: "2px solid var(--white)",

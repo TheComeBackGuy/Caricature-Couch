@@ -29,7 +29,7 @@
 
 .mobileMenuContainer {
   position: fixed;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   width: 100%;
   height: 100%;
   display: flex;
@@ -85,4 +85,17 @@
   font-size: xx-large;
   color: var(--white);
   cursor: pointer;
+}
+
+.desktopMenuList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: inherit;
+  /* padding: 0 20px; */
+  margin: 20px 0;
+  gap: 20px;
+  @media (max-width: 1199px) {
+    display: none;
+  }
 }

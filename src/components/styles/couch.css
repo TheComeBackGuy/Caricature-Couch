@@ -1,22 +1,18 @@
 .couchImageContainer {
   position: relative;
-  margin: 0 -20px;
-  width: inherit;
+  width: 120%;
+  max-width: 900px;
   height: fit-content;
   aspect-ratio: 970 / 450;
-  overflow: hidden;
+  align-self: center;
+  overflow: visible;
   z-index: 1000;
+  justify-self: center;
 }
 
 .couchContainer {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
-  height: fit-content;
-  min-height: fit-content;
-  background-image: url("../../app/images/footer-boxes.gif");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
 }

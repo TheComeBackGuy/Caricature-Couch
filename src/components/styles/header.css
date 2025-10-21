@@ -3,7 +3,8 @@ header {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  z-index: 2000;
+  background-color: var(--tanLight);
+  background-image: url("../../../public/images/bg.jpg");
 }
 
 .headerContainer {
@@ -29,6 +30,8 @@ header {
   z-index: 3;
   justify-self: center;
   /* border: 2px solid red; */
+  z-index: 2000;
+  min-width: 300px;
 }
 
 .hdr-menu {

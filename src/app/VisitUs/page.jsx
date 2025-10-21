@@ -38,7 +38,7 @@ export default function Directions() {
               <h2>Operating Hours</h2>
               <p>
                 Open 10am - 8pm <br />
-                Friday - Sunday
+                Wednesday - Monday
               </p>
             </div>
             <div className="addy">

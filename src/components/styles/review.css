@@ -1,0 +1,31 @@
+.singleReviewContainer {
+  background-color: var(--whiter);
+  border-radius: 20px;
+  color: var(--blackRed);
+  /* border: 5px solid var(--blackRed); */
+  font-size: medium;
+  padding: 30px;
+  width: auto;
+  flex-basis: 25%;
+  flex-shrink: 1;
+  flex-grow: 2;
+}
+
+.reviewListContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding: 0 20px;
+}
+
+.mouthContainer {
+  position: relative;
+  margin-left: -60px;
+  width: 100px;
+  height: 150px;
+  overflow: visible;
+  /* border: 1px solid red; */
+}
