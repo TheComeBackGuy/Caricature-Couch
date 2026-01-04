@@ -8,6 +8,7 @@ import Rainbow from "@/components/Rainbow";
 import Header from "@/components/Header";
 import { Suspense } from "react";
 import Loading from "./Loading";
+import Announcement from "@/components/Announcement";
 
 const mynerve = Mynerve({
   subsets: ["latin", "latin-ext"], // Example: Include Latin and Latin Extended subsets
@@ -36,10 +37,10 @@ export default function RootLayout({ children }) {
         style={{
           display: "flex",
           justifyContent: "center",
-          backgroundColor: "var(--rainbowYellow)",
         }}
       >
         <div className={styles.siteContainer}>
+          <Announcement />
           <div className={styles.mainContainer}>
             <MobileMenu />
             <>

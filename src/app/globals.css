@@ -38,12 +38,13 @@ html,
 body {
   line-height: 1.5em;
   height: 100%;
+  z-index: 0;
 }
 
 body {
   /* text-align: center; */
   color: var(--tanDarkText);
-  background: var(--tanLight);
+  background: var(--rainbowYellow);
   font-family: "Montserrat", Arial, Helvetica, sans-serif, "Mynerve";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -51,6 +52,7 @@ body {
   min-height: 100%;
   height: auto;
   /* border: 5px dotted red; */
+  z-index: 0;
 }
 
 * {
@@ -107,9 +109,7 @@ a {
   flex-flow: column nowrap;
   align-items: flex-start;
   width: 100%;
-  height: fit-content;
-  /* overflow: clip; */
-
+  height: auto;
   gap: 20px;
 }
 
@@ -258,9 +258,13 @@ button:disabled {
 
 .contentContainer {
   padding: 0 20px;
-  gap: 30px;
+  gap: 50px;
 }
 
 label {
   margin-right: 20px;
+}
+
+.soloSticker {
+  position: absolute;
 }

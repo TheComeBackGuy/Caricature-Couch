@@ -1,0 +1,15 @@
+.announcement-container {
+  padding: 10px 20px;
+  display: block;
+  /* position: fixed; */
+  left: 0;
+  width: 100%;
+  background-color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 10000;
+  border: 2px dashed var(--rainbowRed);
+  /* margin-top: -40px; */
+  border-radius: 5px;
+}

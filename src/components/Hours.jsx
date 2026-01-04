@@ -1,31 +1,12 @@
 import React from "react";
-
+import "./styles/hours.css";
 export default function Hours() {
-  const styles = {
-    display: "block",
-    width: "fit-content",
-    padding: "5px",
-    alignSelf: "center",
-    color: "var(--white)",
-    backgroundColor: "var(--rainbowTurquoise)",
-    fontWeight: "600",
-    borderRadius: "4px",
-    border: "5px solid var(--whiter)",
-  };
-  const h2Style = {
-    borderTop: "2px solid var(--white)",
-    borderBottom: "2px solid var(--white)",
-    borderColor: "var(--white)",
-    color: "var(--white)",
-    padding: "5px",
-  };
-
   return (
-    <div style={styles}>
-      <h2 style={h2Style}>
-        Open 10am-8pm
-        <span style={{ fontWeight: "100" }}> : CLOSED TUESDAYS</span>
-      </h2>
+    <div className="hoursContainer">
+      <div className="borderContainer">
+        <h2>Open 10am-8pm </h2>
+        <p>CLOSED TUESDAYS</p>
+      </div>
     </div>
   );
 }

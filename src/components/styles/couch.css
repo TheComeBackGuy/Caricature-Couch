@@ -1,3 +1,10 @@
+.couchContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+}
+
 .couchImageContainer {
   position: relative;
   width: 120%;
@@ -8,11 +15,5 @@
   overflow: visible;
   z-index: 1000;
   justify-self: center;
-}
-
-.couchContainer {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  width: 100%;
+  margin: 0 -20px;
 }

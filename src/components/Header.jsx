@@ -8,15 +8,6 @@ import MenuList from "./MenuList";
 export default function Header() {
   return (
     <header>
-      {/* <div className="hdr-menu">
-        <Link href={"/Contact"} className="menu-link">
-        {" "}
-        Contact
-        </Link>
-        <Link href={"/AboutUs"} className="menu-link">
-        About Us
-        </Link>
-        </div> */}
       <div className="logoContainer">
         <Link href={"/"}>
           <Image

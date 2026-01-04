@@ -1,18 +1,37 @@
 import React from "react";
+import Mouth1 from "../app/images/mouth1.png";
+import Mouth2 from "../app/images/mouth2.png";
+import Mouth3 from "../app/images/mouth3.png";
 import ReviewSingle from "./ReviewSingle";
 import "./styles/review.css";
 import ListOfReviews from "../reviews.json";
+import SingleSticker from "./SingleSticker";
+
+const mouths = [Mouth1, Mouth2, Mouth3];
+
 export default function Reviews() {
   return (
     <div className="reviewListContainer">
+      {/* <SingleSticker side="left" stickerNumber={0} /> */}
+      <h1 style={{ display: "block", width: "100%", textAlign: "center" }}>
+        Over{" "}
+        <span style={{ fontSize: "xxx-large", color: "var(--RainbowRed)" }}>
+          80
+        </span>{" "}
+        five-star reviews on Google!
+      </h1>
       {ListOfReviews.map((r, i) => {
         console.log(i);
         return (
-          <div key={i}>
-            <ReviewSingle author={r.author} review={r.review} pic={i} />
-          </div>
+          <ReviewSingle
+            key={i}
+            author={r.author}
+            review={r.review}
+            pic={mouths[i]}
+          />
         );
       })}
+      {/* <SingleSticker side="right" stickerNumber={1} /> */}
     </div>
   );
 }

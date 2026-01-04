@@ -6,7 +6,7 @@ footer {
   width: 100%;
   background-color: var(--white);
   /* background-color: none; */
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .footerInfo {

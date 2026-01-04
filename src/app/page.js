@@ -39,7 +39,7 @@ export default function Home() {
       </div>
 
       <Hours />
-      {/* <Reviews /> */}
+      <Reviews />
       <div className="promoContainer">
         <ImagePromo
           theme="red"
