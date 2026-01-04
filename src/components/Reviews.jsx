@@ -16,7 +16,7 @@ export default function Reviews() {
       <h1 style={{ display: "block", width: "100%", textAlign: "center" }}>
         Over{" "}
         <span style={{ fontSize: "xxx-large", color: "var(--RainbowRed)" }}>
-          80
+          100
         </span>{" "}
         five-star reviews on Google!
       </h1>
