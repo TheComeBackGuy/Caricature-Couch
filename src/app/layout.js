@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
         }}
       >
         <div className={styles.siteContainer}>
-          <Announcement />
+          {/* <Announcement /> */}
           <div className={styles.mainContainer}>
             <MobileMenu />
             <>
