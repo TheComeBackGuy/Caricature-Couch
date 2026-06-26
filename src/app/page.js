@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <div className="polaroidContainer">
         <Polaroid
-          rotate={-5}
+          rotate={0}
           z={1}
           image="guest2"
           imageAlt={
@@ -23,7 +23,7 @@ export default function Home() {
           text="Honestly, our guests are the best people!"
         />
         <Polaroid
-          rotate={0}
+          rotate={5}
           z={2}
           image="wall"
           imageAlt={"the back wall"}
@@ -36,9 +36,23 @@ export default function Home() {
           imageAlt={"Our booth in the lobby"}
           text="We adore drawing couples!"
         />{" "}
+        <Polaroid
+          rotate={9}
+          z={2}
+          image="guest3"
+          imageAlt={"Our booth in the lobby"}
+          text="We adore drawing couples!"
+        />{" "}
+        <Polaroid
+          rotate={10}
+          z={2}
+          image="guest3"
+          imageAlt={"Our booth in the lobby"}
+          text="We adore drawing couples!"
+        />{" "}
       </div>
 
-      <Hours />
+      {/* <Hours /> */}
       <Reviews />
       <div className="promoContainer">
         <ImagePromo
@@ -49,13 +63,13 @@ export default function Home() {
           p="We just love that we can now give you high-quality copies of your
           caricatures."
         />
-        <ImagePromo
+        {/* <ImagePromo
           theme="yellow"
           img="/images/caricatureStickerPromo.png"
           alt="A sample of sticker sheets"
           hdr="Stickers of you"
           p="Our coolest add-on is your very own sticker sheet! Get a Choo Choo sticker, Caricature  Couch sticker, and two stickers of your caricature."
-        />{" "}
+        />{" "} */}
         <ImagePromo
           theme="white"
           alt="A picture of the back entrance to the Chattanooga Choo Choo"

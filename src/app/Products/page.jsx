@@ -29,7 +29,7 @@ export default function Products() {
           image="guest6"
           imageAlt={"A couple happily displaying their drawing"}
           text="We're all about drawing people together."
-        />
+        />{" "}
       </div>
       <div style={{ margin: "40px 20px" }}>
         <h1 className="pageHeader">We can offer more than ever!</h1>

@@ -149,12 +149,15 @@ h2 {
   display: flex;
   position: relative;
   margin-top: -40px;
-  margin-left: -10%;
+  /* margin-left: -10%; */
   flex-flow: row nowrap;
-  width: 120%;
+  width: 100%;
+  height: fit-content;
   /* border: 2px solid red; */
   overflow: visible;
+  justify-content: center;
   z-index: 2;
+  background-image: url("../../public/images/bg.jpg");
 }
 
 .polaroidContainer > div:nth-child(2) {
