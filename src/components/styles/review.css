@@ -7,6 +7,16 @@
   gap: 20px;
   margin: 50px 0;
   padding: 0 20px;
+  background-image: url("../../app/images/bg-textures-orange-small.jpg");
+}
+
+.reviewListContainer > h1 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 1.5 em;
+  font-size: 3em;
+  color: var(--white);
 }
 
 .singleReviewContainer {
@@ -14,8 +24,14 @@
   flex-flow: column nowrap;
   gap: 20px;
   padding: 10px;
-  background-color: var(--white);
+  background-repeat: repeat;
+  /* background-color: var(--rainbowTurquoise); */
+  /* background-image: url("../../app/images/bg-textures-turquise-small.jpg"); */
   width: 100%;
+  color: white;
+  font-weight: 600;
+  font-size: large;
+  line-height: 1.75em;
   border-radius: 5px;
   min-width: 230px;
   flex-shrink: 4;
@@ -23,6 +39,7 @@
   flex-grow: 3;
   align-content: stretch;
   justify-content: stretch;
+  text-align: center;
   @media (max-width: 500px) {
     min-width: auto;
   }
@@ -43,5 +60,5 @@
 
 cite {
   display: block;
-  align-self: flex-end;
+  align-self: flex-start;
 }

@@ -3,8 +3,8 @@ header {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  background-color: var(--tanLight);
-  background-image: url("../../../public/images/bg.jpg");
+  /* background-color: var(--tanLight); */
+  /* background-image: url("../../../public/images/bg.jpg"); */
 }
 
 .headerContainer {
@@ -17,12 +17,11 @@ header {
   /* min-width: 600px; */
   height: fit-content;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .logoContainer {
   position: relative;
   width: 100%;
-  /* border: 2px solid red; */
   height: fit-content;
   margin-top: 15px;
   aspect-ratio: 17 / 7;

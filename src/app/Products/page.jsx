@@ -48,16 +48,15 @@ export default function Products() {
           alt="A printer atatcks an artist with copies"
           hdr="Caricature Copies"
           p="Okay, we're being dramatic. We just love that we can now give you high-quality copies of your caricatures."
-          inline
         />
-        <ImagePromo
+        {/* <ImagePromo
           theme="white"
           img="/images/caricatureStickerPromo.png"
           alt="A sample of sticker sheets"
           hdr="Stickers of you"
           p="Our coolest add-on is your very own sticker sheet! Get a Choo Choo sticker, Caricature  Couch sticker, and two stickers of your caricature."
           inline
-        />
+        /> */}
         <ImagePromo
           theme="white"
           img="/images/stickerPromo.png"
@@ -81,10 +80,10 @@ export default function Products() {
         />
         <ImagePromo
           theme="white"
-          img="/images/originalsPromo.png"
+          img="/images/originalsPromo.jpg"
           alt="3 original caricature samples"
           hdr="Originals"
-          p="We're selling off old samples and new pieces. They just need a good home to appreciate them."
+          p="We're still making traditional ar around here. Come see if we have something you're into."
         />
       </div>
     </>

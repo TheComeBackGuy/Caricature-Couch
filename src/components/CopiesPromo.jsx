@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Copies from "../app/images/copies2.jpg";
+import Copies from "../app/images/copies.png";
 import "./styles/copiesPromo.css";
 
 export default function CopiesPromo() {
@@ -18,19 +18,11 @@ export default function CopiesPromo() {
             }}
           />
         </div>
-        <h2
-          style={{
-            color: "var(--white)",
-            backgroundColor: "var(--rainbowRed)",
-            padding: "0 20px",
-          }}
-        >
-          Okay, we're being dramatic
-        </h2>
+        {/* <h2 style={{}}>Okay, we're being dramatic</h2>
         <p className="copiesP">
           We just love that we can now give you high-quality copies of your
           caricatures.
-        </p>
+        </p> */}
       </div>
     </div>
   );

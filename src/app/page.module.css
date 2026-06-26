@@ -16,14 +16,15 @@
   flex-flow: column nowrap;
   /* max-width: 1500px; */
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   background: var(--tanLight);
   overflow: visible;
+  background-image: url("../../public/images/bg2.jpg");
 }
 .mainContainer {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   height: 100%;
   width: 100%;
   /* background-image: url("images/top-boxes.gif"); */

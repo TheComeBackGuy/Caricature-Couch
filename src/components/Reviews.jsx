@@ -12,14 +12,18 @@ const mouths = [Mouth1, Mouth2, Mouth3];
 export default function Reviews() {
   return (
     <div className="reviewListContainer">
-      {/* <SingleSticker side="left" stickerNumber={0} /> */}
-      <h1 style={{ display: "block", width: "100%", textAlign: "center" }}>
-        Over{" "}
-        <span style={{ fontSize: "xxx-large", color: "var(--RainbowRed)" }}>
-          100
-        </span>{" "}
-        five-star reviews on Google!
-      </h1>
+      {/* <h1
+        style={{
+          display: "block",
+          width: "100%",
+          textAlign: "center",
+          paddingTop: "1.5em",
+        }}
+      >
+        100+ 5-star
+        <br />
+        Google Reviews!
+      </h1> */}
       {ListOfReviews.map((r, i) => {
         console.log(i);
         return (

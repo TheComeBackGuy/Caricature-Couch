@@ -14,18 +14,18 @@ export default function SingleSticker({ side, stickerNumber }) {
     let marginStyle;
     if (s == "left") {
       marginStyle = {
-        position: "absolute",
-        top: `${randoPosition(60)}%`,
+        position: "relative",
+        // top: `${randoPosition(60)}%`,
 
-        left: "-190px",
+        left: "-175px",
         zIndex: "3000",
         overflow: "visible",
       };
     } else if (s == "right") {
       marginStyle = {
-        position: "absolute",
-        right: "-190px",
-        top: `${randoPosition(60)}%`,
+        position: "relative",
+        right: "-0px",
+        // top: `${randoPosition(60)}%`,
         zIndex: "3000",
         overflow: "visible",
       };

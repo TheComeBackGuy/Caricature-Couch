@@ -4,6 +4,8 @@
   width: 100%;
   padding: 0 20px;
   /* border: 20px solid var(--rainbowRed); */
+  /* background-image: url("../../app/images/bg-textures-red-large.jpg"); */
+  background-repeat: repeat;
 }
 .copiesImageContainer {
   position: relative;
@@ -11,7 +13,6 @@
   aspect-ratio: 16 / 12;
   overflow: hidden;
   border-radius: 20px 20px 0 0;
-  background-color: var(--rainbowRed);
 }
 
 .copiesP {
@@ -19,5 +20,4 @@
   background-color: var(--rainbowRed);
   color: var(--rainbowYellow);
   font-weight: 600;
-  border-radius: 0 0 20px 20px;
 }

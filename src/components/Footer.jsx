@@ -23,7 +23,7 @@ export default function Footer() {
           <p>
             Open 10am-8pm
             <br />
-            CLOSED TUESDAYS
+            OPEN EVERYDAY
           </p>
           <p>Be Kind. Fight Evil.</p>
         </div>

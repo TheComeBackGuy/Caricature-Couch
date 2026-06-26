@@ -143,13 +143,9 @@ export default function Contact() {
           data-netlify="true"
           netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
+          className="intakeForm"
         >
-          <div
-            style={{
-              display: "flex",
-              flexFlow: "row wrap",
-            }}
-          >
+          <div>
             <input type="hidden" name="form-name" value="Couch Contact" />
             <label>
               Name:

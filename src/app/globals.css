@@ -15,9 +15,11 @@
   /* rainbow */
   --rainbowBlue: #1b525d;
   --rainbowTurquoise: #03898c;
+  --rainbowTurquoiseLight: #89e6e7;
   --rainbowYellow: #edaa23;
   --rainbowOrange: #f28621;
   --rainbowRed: #a4282a;
+  --rainbowRedDark: #461b19;
   --rainbowRedLight: #ce6466;
 }
 
@@ -51,7 +53,6 @@ body {
   /* min-width: 400px; */
   min-height: 100%;
   height: auto;
-  /* border: 5px dotted red; */
   z-index: 0;
 }
 
@@ -86,6 +87,7 @@ a {
   gap: 5%;
   z-index: 0;
   /* border: 2px solid black; */
+  background-image: url("../../public/images/bg.jpg");
 }
 
 .rainbowStripe {
@@ -108,14 +110,18 @@ a {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
-  height: auto;
+  max-width: 1200px;
+  min-height: 100vh;
   gap: 20px;
+  border-bottom: 2px solid var(--rainbowTurquoise);
+  background-image: url("../../public/images/bg.jpg");
 }
 
 .left {
-  /* padding-right: 10px; */
   text-align: right;
+  background-image: url("../../public/images/bg2.jpg");
 }
 
 .pageHeader {
@@ -157,11 +163,14 @@ h2 {
   overflow: visible;
   justify-content: center;
   z-index: 2;
-  background-image: url("../../public/images/bg.jpg");
+  /* background-image: url("../../public/images/bg.jpg"); */
+  @media (max-width: 800px) {
+    font-size: small;
+  }
 }
 
 .polaroidContainer > div:nth-child(2) {
-  @media (max-width: 1000px) {
+  @media (max-width: 1080px) {
     display: none;
   }
 }
@@ -262,6 +271,7 @@ button:disabled {
 .contentContainer {
   padding: 0 20px;
   gap: 50px;
+  width: 100%;
 }
 
 label {
@@ -270,4 +280,25 @@ label {
 
 .soloSticker {
   position: absolute;
+}
+
+.steps {
+  display: flex;
+  flex-flow: column nowrap;
+  list-style: none;
+  gap: 20px;
+  color: var(--rainbowTurquoiseLight);
+}
+.steps > li {
+  width: stretch;
+  text-align: center;
+
+  padding: 30px;
+  border-radius: 20px;
+  background-color: var(--rainbowTurquoise);
+  background-image: url("../../public/images/bg-textures-turquise.jpg");
+}
+.steps > li > h1 {
+  font-size: 8em;
+  margin: 0;
 }

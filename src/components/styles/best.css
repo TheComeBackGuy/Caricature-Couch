@@ -1,0 +1,11 @@
+.main-container {
+  width: 100%;
+  height: fit-content;
+  padding: 0 20px;
+}
+.image-container {
+  border: 3px solid var(--rainbowRed);
+  width: inherit;
+  border-radius: 20px;
+  background-image: url("../../app/images/botb.jpg");
+}

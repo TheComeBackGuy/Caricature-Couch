@@ -16,14 +16,14 @@ export default function ReviewSingle({ author, review, pic }) {
           alignItems: "center",
         }}
       >
-        <div className="mouthContainer">
+        {/* <div className="mouthContainer">
           <Image
             src={pic}
             alt="an open mouth"
             fill
             style={{ objectFit: "contain" }}
           />
-        </div>
+        </div> */}
         <p>{review}</p>
       </div>
       <cite style={{ topMargin: "20px" }}>-{author}</cite>

@@ -22,7 +22,7 @@
     min-width: 150px;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1080px) {
     display: none;
   }
 }
@@ -90,12 +90,12 @@
 .desktopMenuList {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   width: inherit;
   /* padding: 0 20px; */
-  margin: 20px 0;
-  gap: 40px;
-  @media (max-width: 1199px) {
+  /* margin: 20px 0; */
+  gap: 10px 40px;
+  @media (max-width: 1080px) {
     display: none;
   }
 }
