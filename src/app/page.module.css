@@ -20,6 +20,9 @@
   background: var(--tanLight);
   overflow: visible;
   background-image: url("../../public/images/bg2.jpg");
+  @media (max-width: 1200px) {
+    overflow: hidden;
+  }
 }
 .mainContainer {
   display: flex;

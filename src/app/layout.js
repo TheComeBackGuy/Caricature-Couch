@@ -1,4 +1,4 @@
-import { Montserrat, Mynerve } from "next/font/google";
+import { Luckiest_Guy, Montserrat, Mynerve } from "next/font/google";
 import "../app/globals.css";
 import FooterCouch from "@/components/FooterCouch";
 import Footer from "@/components/Footer";
@@ -24,6 +24,10 @@ const montserratLight = Montserrat({
   subsets: ["latin"],
 });
 
+const LuckiestGuy = Luckiest_Guy({
+  weight: "400",
+});
+
 export const metadata = {
   title: "Hartsyfartsy's Caricature Couch",
   description: "Chattanooga's Caricature Destination",
@@ -33,7 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${montserratLight.variable}`}
+        // className={`${montserrat.variable} ${montserratLight.variable}`}
         style={{
           display: "flex",
           justifyContent: "center",

@@ -29,6 +29,13 @@ export default function Directions() {
           imageAlt={"The side of the Parking garage seen from the Choo Choo"}
           text="Look at that outside facade! It's gorgeous. "
         />
+        <Polaroid
+          rotate={5}
+          z={2}
+          image="choochOutside"
+          imageAlt={"The side of the Parking garage seen from the Choo Choo"}
+          text="Look at that outside facade! It's gorgeous. "
+        />
       </div>
       <div
         className="contentContainer"

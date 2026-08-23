@@ -7,26 +7,29 @@ import "./styles/review.css";
 import Stars from "./Stars";
 export default function ReviewSingle({ author, review, pic }) {
   return (
-    <div className="singleReviewContainer">
-      <Stars />
-      <div
-        style={{
-          display: "flex",
-          flexFlow: "row nowrap",
-          alignItems: "center",
-        }}
-      >
-        {/* <div className="mouthContainer">
+    <div className="singleReviewContainerBorder">
+      <div className="singleReviewContainer">
+        <Stars />
+        <div
+          style={{
+            display: "flex",
+            flexFlow: "column nowrap",
+            alignItems: "center",
+            borderRadius: "20px",
+          }}
+        >
+          {/* <div className="mouthContainer">
           <Image
-            src={pic}
-            alt="an open mouth"
-            fill
-            style={{ objectFit: "contain" }}
+          src={pic}
+          alt="an open mouth"
+          fill
+          style={{ objectFit: "contain" }}
           />
-        </div> */}
-        <p>{review}</p>
+          </div> */}
+          <p>{review}</p>
+          <cite style={{ topMargin: "20px" }}>-{author}</cite>
+        </div>
       </div>
-      <cite style={{ topMargin: "20px" }}>-{author}</cite>
     </div>
   );
 }

@@ -144,6 +144,13 @@ export default function Appointments() {
           image="guest9"
           imageAlt={"a couple getting holding up their drawing"}
           text="Play on, short king!"
+        />{" "}
+        <Polaroid
+          rotate={5}
+          z={2}
+          image="guest9"
+          imageAlt={"a couple getting holding up their drawing"}
+          text="Play on, short king!"
         />
       </div>
 

@@ -114,6 +114,13 @@ export default function Contact() {
           imageAlt={"A picture of the Chattanooga Choo Choo"}
           text="SantaCaligon 2019. What a year!"
         />
+        <Polaroid
+          rotate={5}
+          z={2}
+          image="team"
+          imageAlt={"A picture of the Chattanooga Choo Choo"}
+          text="SantaCaligon 2019. What a year!"
+        />
       </div>
       <div className="contentContainer" style={{ marginTop: "40px" }}>
         <h1 className="pageHeader">Reaching out is as Easy as an email</h1>

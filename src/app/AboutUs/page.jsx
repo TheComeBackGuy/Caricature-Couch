@@ -29,6 +29,13 @@ export default function AboutUs() {
           imageAlt={"Two people making silly faces"}
           text="Just a couple of goobs. "
         />{" "}
+        <Polaroid
+          rotate={5}
+          z={2}
+          image="krystalMe"
+          imageAlt={"Two people making silly faces"}
+          text="Just a couple of goobs. "
+        />{" "}
       </div>
       <div className="contentContainer" style={{ marginTop: "40px" }}>
         <h1>

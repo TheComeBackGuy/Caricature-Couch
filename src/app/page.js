@@ -10,6 +10,8 @@ import Hours from "@/components/Hours";
 import MenuList from "@/components/MenuList";
 import Reviews from "@/components/Reviews";
 import BestoftheBest from "@/components/BestoftheBest";
+import "../components/styles/directions.css";
+import Parking from "@/components/Parking";
 
 export default function Home() {
   return (
@@ -37,10 +39,17 @@ export default function Home() {
           image="guest3"
           imageAlt={"Our booth in the lobby"}
           text="We adore drawing couples!"
+        />
+        <Polaroid
+          rotate={5}
+          z={0}
+          image="guest3"
+          imageAlt={"Our booth in the lobby"}
+          text="We adore drawing couples!"
         />{" "}
       </div>
       <div className="contentContainer">
-        <h1
+        {/* <h1
           style={{
             color: "var(--rainbowRed)",
             marginTop: "20px",
@@ -48,35 +57,35 @@ export default function Home() {
           }}
         >
           Welcome to Chattanooga's Newest Destination for fun!
-        </h1>
+        </h1> */}
       </div>
-      {/* <BestoftheBest /> */}
+
       <Reviews />
+      <div className="addy">
+        <div className="deets">
+          <h2 style={{ color: "white" }}>Operating Hours</h2>
+          <p>
+            10am - 8pm <br />7 DAYS A WEEK!
+          </p>
+        </div>
+        <div className="deets">
+          <h2 style={{ color: "white" }}>Address</h2>
+          <p>
+            1400 Market Street #126
+            <br />
+            Chatttanooga, TN 37405
+          </p>
+        </div>
+      </div>
       {/* <SingleSticker side="left" stickerNumber={0} /> */}
-      <div className="promoContainer">
-        {/* <CopiesPromo /> */}
-        {/* <ImagePromo
-          theme="red"
-          img="/images/copies2.jpg"
-          alt="A printer atatcks an artist with copies"
-          hdr="Okay, We're being dramatic"
-          p="We just love that we can now give you high-quality copies of your
-          caricatures."
-        /> */}
-        {/* <ImagePromo
-          theme="yellow"
-          img="/images/caricatureStickerPromo.png"
-          alt="A sample of sticker sheets"
-          hdr="Stickers of you"
-          p="Our coolest add-on is your very own sticker sheet! Get a Choo Choo sticker, Caricature  Couch sticker, and two stickers of your caricature."
-        />{" "} */}
-        {/* <ImagePromo
-          theme="white"
-          alt="A picture of the back entrance to the Chattanooga Choo Choo"
-          img="/images/chooch.jpg"
-          hdr="The Choo Choo"
-          p="We are located in the wonderfully historic Chattanooga Choo Choo. Come find us inside the beautiful main atrium."
-        /> */}
+      <div
+        className="contentContainer"
+        style={{ margin: "40px 0", width: "100%" }}
+      >
+        {/* <h1 className="pageHeader">When's and Where's</h1> */}
+      </div>
+      <div className="promoContainer" style={{}}>
+        <Parking />
       </div>
     </>
   );
