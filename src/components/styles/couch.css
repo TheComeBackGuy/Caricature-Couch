@@ -40,7 +40,7 @@
   aspect-ratio: inherit;
   z-index: 101;
   object-fit: cover;
-  margin-bottom: -2%;
+  margin-bottom: -1.7%;
   @media (max-width: 960px) {
     margin-bottom: -2.3%;
   }

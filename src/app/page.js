@@ -12,6 +12,7 @@ import Reviews from "@/components/Reviews";
 import BestoftheBest from "@/components/BestoftheBest";
 import "../components/styles/directions.css";
 import Parking from "@/components/Parking";
+import WeWantYou from "@/components/WeWantYou";
 
 export default function Home() {
   return (
@@ -43,9 +44,9 @@ export default function Home() {
         <Polaroid
           rotate={5}
           z={0}
-          image="guest3"
+          image="guest10"
           imageAlt={"Our booth in the lobby"}
-          text="We adore drawing couples!"
+          text=" "
         />{" "}
       </div>
       <div className="contentContainer">
@@ -60,7 +61,6 @@ export default function Home() {
         </h1> */}
       </div>
 
-      <Reviews />
       <div className="addy">
         <div className="deets">
           <h2 style={{ color: "white" }}>Operating Hours</h2>
@@ -84,8 +84,10 @@ export default function Home() {
       >
         {/* <h1 className="pageHeader">When's and Where's</h1> */}
       </div>
-      <div className="promoContainer" style={{}}>
+      <div className="promoContainer">
         <Parking />
+        <Reviews />
+        <WeWantYou />
       </div>
     </>
   );

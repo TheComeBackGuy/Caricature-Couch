@@ -33,7 +33,7 @@ export default function Products() {
         <Polaroid
           rotate={5}
           z={2}
-          image="guest6"
+          image="guest12"
           imageAlt={"A couple happily displaying their drawing"}
           text="We're all about drawing people together."
         />{" "}

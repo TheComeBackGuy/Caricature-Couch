@@ -309,7 +309,7 @@ label {
 
 .steps {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   list-style: none;
   gap: 20px;
   color: var(--rainbowTurquoiseLight);
@@ -317,14 +317,13 @@ label {
 .steps > li {
   width: stretch;
   text-align: center;
-
   padding: 30px;
   border-radius: 20px;
   background-color: var(--rainbowTurquoise);
   background-image: url("../../public/images/bg-textures-turquise.jpg");
 }
 .steps > li > h1 {
-  font-size: 8em;
+  font-size: 10em;
   margin: 0;
 }
 

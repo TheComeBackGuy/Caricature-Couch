@@ -148,9 +148,9 @@ export default function Appointments() {
         <Polaroid
           rotate={5}
           z={2}
-          image="guest9"
+          image="guest11"
           imageAlt={"a couple getting holding up their drawing"}
-          text="Play on, short king!"
+          text=" "
         />
       </div>
 
