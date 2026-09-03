@@ -123,42 +123,42 @@ export default function Appointments() {
 
   return (
     <>
-      <div className="polaroidContainer">
+      <div className='polaroidContainer'>
         <Polaroid
           rotate={-5}
           z={1}
-          image="guest7"
+          image='guest7'
           imageAlt={"a couple getting holding up their drawing"}
-          text="Getting a bit sillier is fun"
+          text='Getting a bit sillier is fun'
         />{" "}
         <Polaroid
           rotate={0}
           z={0}
-          image="guest8"
+          image='guest8'
           imageAlt={"a couple getting holding up their drawing"}
-          text="We love giving couples a keepsake to remember. "
+          text='We love giving couples a keepsake to remember. '
         />
         <Polaroid
           rotate={5}
           z={2}
-          image="guest9"
+          image='guest9'
           imageAlt={"a couple getting holding up their drawing"}
-          text="Play on, short king!"
+          text='Play on, short king!'
         />{" "}
         <Polaroid
           rotate={5}
           z={2}
-          image="guest11"
+          image='guest11'
           imageAlt={"a couple getting holding up their drawing"}
-          text=" "
+          text=' '
         />
       </div>
 
-      <div className="contentContainer" style={{ marginTop: "40px" }}>
-        <h1 className="pageHeader">Walk up or plan an appointment</h1>
+      <div className='contentContainer' style={{ marginTop: "40px" }}>
+        <h1 className='pageHeader'>Walk up or plan an appointment</h1>
 
         <div
-          className="intakeForm"
+          className='intakeForm'
           style={{ display: thankYouDisplay, flexFlow: "column nowrap" }}
         >
           <h1>Thanks, {name}!</h1>
@@ -183,10 +183,13 @@ export default function Appointments() {
           </>
         </div>
 
-        <div className="appointmentContainer">
-          <ul className="steps">
+        <div className='appointmentContainer'>
+          {/* <ul className='steps'>
             <li>
-              <h1>1</h1>
+              <h1>Walk-up or Make an Appointment</h1>
+            </li>
+            <li>
+              <h1>5</h1>
               <br />
               <p>Fill out the form</p>
             </li>
@@ -202,18 +205,18 @@ export default function Appointments() {
               <br />
               <p> Show up for your appointment</p>
             </li>
-          </ul>
+          </ul> */}
 
           <div style={{ display: formDisplay }}>
             <form
-              name="Couch Appointments"
-              className="intakeForm"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
+              name='Couch Appointments'
+              className='intakeForm'
+              method='POST'
+              data-netlify='true'
+              netlify-honeypot='bot-field'
               onSubmit={handleSubmit}
             >
-              <div className="formHeader">
+              <div className='formHeader'>
                 <h1>Appointment Intake Form</h1>
               </div>
 
@@ -224,16 +227,16 @@ export default function Appointments() {
                 }}
               >
                 <input
-                  type="hidden"
-                  name="form-name"
-                  value="Couch Appointments"
+                  type='hidden'
+                  name='form-name'
+                  value='Couch Appointments'
                 />
                 <h3>Contact Information</h3>
                 <label>
                   Name:
                   <input
-                    name="name"
-                    type="text"
+                    name='name'
+                    type='text'
                     value={name}
                     onChange={(e) => {
                       setName(e.target.value);
@@ -243,8 +246,8 @@ export default function Appointments() {
                 <label>
                   Email:
                   <input
-                    name="email"
-                    type="text"
+                    name='email'
+                    type='text'
                     value={email}
                     onChange={(e) => {
                       setEmail(e.target.value);
@@ -255,10 +258,10 @@ export default function Appointments() {
                 <label>
                   How many faces are we drawing including pets?
                   <input
-                    name="numberOfFaces"
-                    type="number"
-                    min="1"
-                    max="10"
+                    name='numberOfFaces'
+                    type='number'
+                    min='1'
+                    max='10'
                     value={numberOfFaces}
                     onChange={(e) => {
                       setNumberOfFaces(e.target.value);
@@ -269,9 +272,9 @@ export default function Appointments() {
                 <div style={{ display: "flex", flexFlow: "row nowrap" }}>
                   <label style={{ textAlign: "center" }}>
                     <input
-                      type="radio"
-                      name="style"
-                      value="Black & White"
+                      type='radio'
+                      name='style'
+                      value='Black & White'
                       checked={colorStyle === "Black & White"}
                       onChange={(e) => {
                         setColorStyle(e.target.value);
@@ -283,9 +286,9 @@ export default function Appointments() {
                   </label>
                   <label style={{ textAlign: "center" }}>
                     <input
-                      type="radio"
-                      name="style"
-                      value="One-Color Shaded"
+                      type='radio'
+                      name='style'
+                      value='One-Color Shaded'
                       checked={colorStyle === "One-Color Shaded"}
                       onChange={(e) => {
                         setColorStyle(e.target.value);
@@ -297,9 +300,9 @@ export default function Appointments() {
                   </label>
                   <label style={{ textAlign: "center" }}>
                     <input
-                      type="radio"
-                      name="style"
-                      value="Full Color"
+                      type='radio'
+                      name='style'
+                      value='Full Color'
                       checked={colorStyle === "Full Color"}
                       onChange={(e) => {
                         setColorStyle(e.target.value);
@@ -323,8 +326,8 @@ export default function Appointments() {
                   Preferred Date:
                   <label>
                     <input
-                      name="date"
-                      type="date"
+                      name='date'
+                      type='date'
                       onChange={(e) => {
                         setAppointmentDate(e.target.value);
                       }}
@@ -333,14 +336,14 @@ export default function Appointments() {
                 </p>
                 <p>Preferred Time:</p>
                 {/* <label>Preferred Time: </label> */}
-                <div className="timeButtonContainer">
+                <div className='timeButtonContainer'>
                   {appointmentTimes.map((x, i) => {
                     return (
-                      <div className="timeBlockHour" key={i}>
+                      <div className='timeBlockHour' key={i}>
                         <input
-                          name="time"
-                          type="button"
-                          className="timeButton"
+                          name='time'
+                          type='button'
+                          className='timeButton'
                           key={i[0]}
                           value={x[0]}
                           onMouseUp={(e) => {
@@ -348,9 +351,9 @@ export default function Appointments() {
                           }}
                         />
                         <input
-                          name="time"
-                          type="button"
-                          className="timeButton"
+                          name='time'
+                          type='button'
+                          className='timeButton'
                           key={i[1]}
                           value={x[1]}
                           onMouseUp={(e) => {
@@ -362,12 +365,12 @@ export default function Appointments() {
                   })}
                 </div>
               </div>
-              <div className="commentBox">
+              <div className='commentBox'>
                 <label>
                   Is there anything else you'd like to let us know:
                   <textarea
-                    name="details"
-                    type="textbox"
+                    name='details'
+                    type='textbox'
                     value={details}
                     onChange={(e) => {
                       setDetails(e.target.value);
@@ -377,7 +380,7 @@ export default function Appointments() {
                 Looks like you've got some missing info there.
                 </cite> */}
                 </label>{" "}
-                <div className="review">
+                <div className='review'>
                   <h2>{name}</h2>
                   {email}
                   <br />
@@ -386,7 +389,7 @@ export default function Appointments() {
                   Meeting on {appointmentDate} at {appointmentStartTime}.
                   <p>Notes: {details}</p>
                 </div>
-                <button className="submit" disabled={isDisabled} submit="true">
+                <button className='submit' disabled={isDisabled} submit='true'>
                   Submit
                 </button>
               </div>
