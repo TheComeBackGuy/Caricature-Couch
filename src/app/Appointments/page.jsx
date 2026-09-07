@@ -7,7 +7,8 @@ import Polaroid from "@/components/Polaroid";
 import PromoSmall from "@/components/PromoSmall";
 
 export default function Appointments() {
-  const [name, setName] = useState("");
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [details, setDetails] = useState("");
   const [warning, setWarning] = useState("none");
@@ -41,7 +42,8 @@ export default function Appointments() {
   useEffect(() => {}, []);
 
   const formResult = {
-    name,
+    firstname,
+    lastname,
     email,
     numberOfFaces,
     colorStyle,
@@ -52,7 +54,8 @@ export default function Appointments() {
 
   useEffect(() => {
     if (
-      name.length == 0 ||
+      firstname.length == 0 ||
+      lastname.length == 0 ||
       email.length == 0 ||
       appointmentDate == "" ||
       appointmentStartTime == ""
@@ -63,7 +66,13 @@ export default function Appointments() {
       setIsDisabled(false);
       setWarning("none");
     }
-  }, [name.length, email.length, appointmentDate, appointmentStartTime]);
+  }, [
+    firstname.length,
+    lastname.length,
+    email.length,
+    appointmentDate,
+    appointmentStartTime,
+  ]);
 
   function encode(data) {
     return Object.keys(data)
@@ -123,7 +132,7 @@ export default function Appointments() {
 
   return (
     <>
-      <div className="polaroidContainer">
+      {/* <div className="polaroidContainer">
         <Polaroid
           rotate={-5}
           z={1}
@@ -151,17 +160,15 @@ export default function Appointments() {
           image="guest11"
           imageAlt={"a couple getting holding up their drawing"}
           text=" "
-        />
+        /> 
       </div>
-
+*/}
       <div className="contentContainer" style={{ marginTop: "40px" }}>
-        <h1 className="pageHeader">Walk up or plan an appointment</h1>
-
         <div
           className="intakeForm"
           style={{ display: thankYouDisplay, flexFlow: "column nowrap" }}
         >
-          <h1>Thanks, {name}!</h1>
+          <h1>Thanks, {firstname}!</h1>
           <>
             <p>
               We're super excited to meet and draw you! We're often able to
@@ -203,6 +210,7 @@ export default function Appointments() {
               <p> Show up for your appointment</p>
             </li>
           </ul>
+          <h1 className="pageHeader">Walk up or plan an appointment</h1>
 
           <div style={{ display: formDisplay }}>
             <form
@@ -216,30 +224,39 @@ export default function Appointments() {
               <div className="formHeader">
                 <h1>Appointment Intake Form</h1>
               </div>
-
-              <div
-                style={{
-                  display: "flex",
-                  flexFlow: "column wrap",
-                }}
-              >
-                <input
-                  type="hidden"
-                  name="form-name"
-                  value="Couch Appointments"
-                />
-                <h3>Contact Information</h3>
-                <label>
-                  Name:
-                  <input
-                    name="name"
-                    type="text"
-                    value={name}
-                    onChange={(e) => {
-                      setName(e.target.value);
-                    }}
-                  ></input>
-                </label>{" "}
+              <input
+                type="hidden"
+                name="form-name"
+                value="Couch Appointments"
+              />
+              <div className="form-content">
+                <h3 className="form-h3">Contact Information</h3>
+                <div>
+                  <label>
+                    First Name:
+                    <input
+                      name="firstname"
+                      type="text"
+                      value={firstname}
+                      onChange={(e) => {
+                        setFirstName(e.target.value);
+                      }}
+                    />
+                  </label>{" "}
+                </div>
+                <div>
+                  <label>
+                    Last Name:
+                    <input
+                      name="lastname"
+                      type="text"
+                      value={lastname}
+                      onChange={(e) => {
+                        setLastName(e.target.value);
+                      }}
+                    />
+                  </label>
+                </div>
                 <label>
                   Email:
                   <input
@@ -249,9 +266,10 @@ export default function Appointments() {
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
-                  ></input>
+                  />{" "}
                 </label>
-                <h3>Number of Faces</h3>
+
+                <h3 className="form-h3">Number of Faces</h3>
                 <label>
                   How many faces are we drawing including pets?
                   <input
@@ -265,7 +283,7 @@ export default function Appointments() {
                     }}
                   />
                 </label>
-                <h3> What style drawing would you like?</h3>
+                <h3 className="form-h3"> What style drawing would you like?</h3>
                 <div style={{ display: "flex", flexFlow: "row nowrap" }}>
                   <label style={{ textAlign: "center" }}>
                     <input
@@ -310,15 +328,7 @@ export default function Appointments() {
                     <br /> $30/person
                   </label>
                 </div>
-              </div>
-              <div
-                style={{
-                  display: "block",
-                  flexFlow: "row nowrap",
-                  gap: "20px",
-                }}
-              >
-                <h3>Request a Time</h3>
+                <h3 className="form-h3">Request a Time</h3>
                 <p>
                   Preferred Date:
                   <label>
@@ -332,7 +342,6 @@ export default function Appointments() {
                   </label>
                 </p>
                 <p>Preferred Time:</p>
-                {/* <label>Preferred Time: </label> */}
                 <div className="timeButtonContainer">
                   {appointmentTimes.map((x, i) => {
                     return (
@@ -361,34 +370,39 @@ export default function Appointments() {
                     );
                   })}
                 </div>
-              </div>
-              <div className="commentBox">
-                <label>
-                  Is there anything else you'd like to let us know:
-                  <textarea
-                    name="details"
-                    type="textbox"
-                    value={details}
-                    onChange={(e) => {
-                      setDetails(e.target.value);
-                    }}
-                  ></textarea>
-                  {/* <cite className="error" style={{ display: warning }}>
+                {/* </div> */}
+                <div className="commentBox">
+                  <label>
+                    Is there anything else you'd like to let us know:
+                    <textarea
+                      name="details"
+                      type="textbox"
+                      value={details}
+                      onChange={(e) => {
+                        setDetails(e.target.value);
+                      }}
+                    ></textarea>
+                    {/* <cite className="error" style={{ display: warning }}>
                 Looks like you've got some missing info there.
                 </cite> */}
-                </label>{" "}
-                <div className="review">
-                  <h2>{name}</h2>
-                  {email}
-                  <br />
-                  Drawing {numberOfFaces} subjects in {colorStyle}.
-                  <br />
-                  Meeting on {appointmentDate} at {appointmentStartTime}.
-                  <p>Notes: {details}</p>
+                  </label>{" "}
+                  <div className="review">
+                    <h2>{firstname}</h2>
+                    {email}
+                    <br />
+                    Drawing {numberOfFaces} subjects in {colorStyle}.
+                    <br />
+                    Meeting on {appointmentDate} at {appointmentStartTime}.
+                    <p>Notes: {details}</p>
+                  </div>
+                  <button
+                    className="submit"
+                    disabled={isDisabled}
+                    submit="true"
+                  >
+                    Submit
+                  </button>
                 </div>
-                <button className="submit" disabled={isDisabled} submit="true">
-                  Submit
-                </button>
               </div>
             </form>
           </div>

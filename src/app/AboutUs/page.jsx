@@ -1,6 +1,7 @@
 import React from "react";
 import "../globals.css";
 import Polaroid from "@/components/Polaroid";
+import NoAI from "@/components/NoAI";
 
 export default function AboutUs() {
   return (
@@ -57,21 +58,7 @@ export default function AboutUs() {
           we could really use it.
         </p>
 
-        <div style={{ marginTop: "40px" }}>
-          <h2>We do not use AI</h2>
-          <cite style={{ color: "var(--rainbowRed)" }}>
-            We do not use any kind of machine-learning or "ai" prompting to
-            produce our art.{" "}
-          </cite>
-          <p>
-            While we use digital programs like Clip Studio Paint to produce a
-            lot of our prints and stickers, these are drawing programs. All our
-            digital art is drawn on a tablet using a stylus and our hand in the
-            same way we draw on paper. Many of our prints start as sketches on
-            paper. We use digital programs to give us the bold lines and color
-            that we love.
-          </p>
-        </div>
+        <NoAI />
         <div style={{ marginTop: "40px" }}>
           <h2>We welcome all those who welcome all</h2>
           <p>

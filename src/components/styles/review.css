@@ -8,9 +8,16 @@
   /* justify-content: flex-end; */
   margin: 50px 0;
   padding: 0 20px;
+  align-items: stretch;
+  justify-content: stretch;
   background-image: url("../../app/images/bg-textures-orange-small.jpg");
   border-top: 20px solid var(--rainbowYellow);
   border-bottom: 20px solid var(--rainbowRed);
+  align-self: center;
+  @media (max-width: 500px) {
+    margin: 0 -10px;
+    padding: 0;
+  }
 }
 
 .singleReviewContainerBorder {
@@ -19,10 +26,8 @@
   gap: 20px;
   padding-bottom: 20px;
   background-repeat: repeat;
-  /* background-color: var(--rainbowTurquoise); */
-  /* background-image: url("../../app/images/bg-textures-turquise-small.jpg"); */
   width: 100%;
-  border-radius: 30px;
+  border-radius: 3px;
   color: white;
   font-weight: 400;
   font-size: large;
@@ -50,13 +55,12 @@
   font-weight: 400;
   font-size: large;
   line-height: 1.75em;
-  border-radius: 19px;
-  /* background-image: url("../../app/images/bg-textures-turquoise-small.jpg"); */
+  border-radius: 3px;
   background-color: var(--white);
-  /* corner-shape: squircle; */
   z-index: 100;
   @media (max-width: 500px) {
     min-width: auto;
+    gap: 10px;
   }
 }
 
@@ -144,9 +148,9 @@ cite {
     left: -120;
   }
   @media (max-width: 500px) {
-    width: 150px;
-    top: 50;
-    left: -80;
+    position: relative;
+    left: 50%;
+    border: 1px solid red;
   }
 }
 .amazed-star {
@@ -176,13 +180,9 @@ cite {
     right: -120;
   }
   @media (max-width: 815px) {
-    width: 180px;
-    top: -100;
-    right: -100;
+    display: none;
   }
-  @media (max-width: 615px) {
-    width: 200px;
-    top: 20;
-    right: -100;
+  @media (max-width: 500px) {
+    display: none;
   }
 }

@@ -1,25 +1,30 @@
 .poster-container {
   display: flex;
-  position: relative;
   flex-flow: column nowrap;
-  width: auto;
-  height: fit-content;
+  width: 100%;
+  height: 100%;
   background-color: #f5e0b1;
   background-image: url("../../app/images/bg-textures-yellow-small.jpg");
   /* flex-basis: 2; */
   border-radius: 3px;
-  aspect-ratio: 3 / 4;
+  /* aspect-ratio: 3 / 4; */
+  @media (max-width: 920px) {
+    font-size: medium;
+  }
 }
 
 .poster-red {
+  height: 100%;
   border-top: 15px solid var(--rainbowRed);
   border-bottom: 15px solid var(--rainbowRed);
   margin: 15px 0;
+  padding: 15px 0;
 }
 .poster-blue {
+  height: 100%;
   border-top: 15px solid var(--rainbowBlue);
   border-bottom: 15px solid var(--rainbowBlue);
-  margin: 15px 0;
+  /* margin: 15px 0; */
 }
 
 .poster-blue > div {
@@ -34,22 +39,25 @@
 .poster-blue > div > h1 {
   color: var(--rainbowRed);
   font-size: 3em;
-  margin: -2em 0 0 0;
+  margin: -1.5em 0 0 0;
 }
 
-.image-container {
+.poster-image-container {
   display: flex;
-  width: auto;
+  width: 130%;
   align-items: center;
   justify-content: center;
 }
 
 .picture {
   /* position: relative; */
-  max-width: 300px;
-  width: 150%;
-  margin-top: -30%;
+  max-width: 400px;
+  width: 100%;
+  margin-top: -20%;
   object-fit: contain;
   height: inherit;
   z-index: 1000;
+  @media (max-width: 920px) {
+    margin-top:;
+  }
 }

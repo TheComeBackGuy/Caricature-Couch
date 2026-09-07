@@ -10,7 +10,7 @@ export default function WeWantYou() {
       <div className="poster-red">
         <div className="poster-blue">
           <div>
-            <div className="image-contianer">
+            <div className="poster-image-container">
               <Image
                 src={You}
                 className="picture"
@@ -19,6 +19,8 @@ export default function WeWantYou() {
             </div>
             <h1>WE WANT YOU</h1>
             <h3>TO GET DRAWN</h3>
+            <br />
+            <h3>...and to have a great time. </h3>
             <GlobalHref url="./Appointments" text="Book an Appointment" />
           </div>
         </div>

@@ -13,6 +13,7 @@ import BestoftheBest from "@/components/BestoftheBest";
 import "../components/styles/directions.css";
 import Parking from "@/components/Parking";
 import WeWantYou from "@/components/WeWantYou";
+import NoAI from "@/components/NoAI";
 
 export default function Home() {
   return (
@@ -50,44 +51,47 @@ export default function Home() {
         />{" "}
       </div>
       <div className="contentContainer">
-        {/* <h1
+        <h1
           style={{
             color: "var(--rainbowRed)",
             marginTop: "20px",
             textAlign: "center",
           }}
         >
-          Welcome to Chattanooga's Newest Destination for fun!
-        </h1> */}
-      </div>
+          Chattanooga's Newest Destination for fun!
+        </h1>
+        <div className="grouping">
+          <WeWantYou />
+          <NoAI />
+        </div>
+        <div className="addy">
+          <div className="deets">
+            <h2 style={{ color: "white" }}>Operating Hours</h2>
+            <p>
+              10am - 8pm <br />7 DAYS A WEEK!
+            </p>
+          </div>
+          <div className="deets">
+            <h2 style={{ color: "white" }}>Address</h2>
+            <p>
+              1400 Market Street #126
+              <br />
+              Chatttanooga, TN 37405
+            </p>
+          </div>
+        </div>
 
-      <div className="addy">
-        <div className="deets">
-          <h2 style={{ color: "white" }}>Operating Hours</h2>
-          <p>
-            10am - 8pm <br />7 DAYS A WEEK!
-          </p>
+        {/* <SingleSticker side="left" stickerNumber={0} /> */}
+        <div
+          className="contentContainer"
+          style={{ margin: "40px 0", width: "100%" }}
+        >
+          {/* <h1 className="pageHeader">When's and Where's</h1> */}
         </div>
-        <div className="deets">
-          <h2 style={{ color: "white" }}>Address</h2>
-          <p>
-            1400 Market Street #126
-            <br />
-            Chatttanooga, TN 37405
-          </p>
+        <div className="promoContainer">
+          <Parking />
+          <Reviews />*
         </div>
-      </div>
-      {/* <SingleSticker side="left" stickerNumber={0} /> */}
-      <div
-        className="contentContainer"
-        style={{ margin: "40px 0", width: "100%" }}
-      >
-        {/* <h1 className="pageHeader">When's and Where's</h1> */}
-      </div>
-      <div className="promoContainer">
-        <Parking />
-        <Reviews />
-        <WeWantYou />
       </div>
     </>
   );

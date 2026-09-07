@@ -5,12 +5,13 @@
   align-items: stretch;
   justify-content: stretch;
   gap: 20px;
-  border: 1px solid red;
+  margin-top: -3em;
+  /* border: 1px solid red; */
 }
 
 .intakeForm {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   width: 100%;
   align-items: flex-start;
   justify-content: flex-start;
@@ -20,16 +21,21 @@
   border-radius: 15px;
   box-shadow: 0px 4px 10px var(--tanDark);
   color: var(--black);
-  overflow: visible;
+  overflow: hidden;
   margin: 0px;
   border: 3px dashed var(--rainbowBlue);
 }
 
 .formHeader {
+  display: block;
   width: 100%;
   padding: 40px 20px;
+  margin-bottom: 3em;
+  justify-content: center;
+  align-items: center;
   background-color: var(--rainbowOrange);
   background-image: url("../../../src/app/images/bg-textures-orange.jpg");
+  flex-basis: 100%;
   /* background-repeat: repeat; */
 }
 
@@ -49,25 +55,31 @@
   text-align: left;
   margin: 0;
 }
-.intakeForm > div > div > h3 {
-  color: var(--rainbowOrange);
-  margin-top: 30px;
-}
 
 label {
-  font-weight: 400;
-  display: block;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  width: fit-content;
+  justify-content: flex-start;
+  /* border: 1px solid blue; */
 }
 
 p {
   margin-bottom: 20px;
 }
-form > h2 {
-  color: var(--rainbowRed);
+
+.form-h3 {
+  /* display: block; */
+  /* width: 100%; */
+  flex-basis: 100%;
+  margin-top: 2em;
+  /* border: 2px solid purple; */
 }
 
 input {
-  margin: 0 10px;
+  display: flex;
+  /* margin: 0 10px; */
   border: 1px solid var(--rainbowYellow);
   background-color: var(--white);
 }
@@ -110,4 +122,13 @@ input[type="button"]:focus {
   display: flex;
   flex-flow: row nowrap;
   gap: 20px;
+}
+
+.form-content {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  align-items: flex-start;
+  gap: 10px;
+  /* border: 5px solid seagreen; */
 }

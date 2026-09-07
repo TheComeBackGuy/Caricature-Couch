@@ -15,7 +15,7 @@ export default function ReviewSingle({ author, review, pic }) {
             display: "flex",
             flexFlow: "column nowrap",
             alignItems: "center",
-            borderRadius: "20px",
+            // borderRadius: "20px",
           }}
         >
           {/* <div className="mouthContainer">
