@@ -140,28 +140,28 @@ export default function Appointments() {
         <Polaroid
           rotate={-5}
           z={1}
-          image="guest7"
+          image='guest7'
           imageAlt={"a couple getting holding up their drawing"}
-          text="Getting a bit sillier is fun"
+          text='Getting a bit sillier is fun'
         />{" "}
         <Polaroid
           rotate={0}
           z={0}
-          image="guest8"
+          image='guest8'
           imageAlt={"a couple getting holding up their drawing"}
-          text="We love giving couples a keepsake to remember. "
+          text='We love giving couples a keepsake to remember. '
         />
         <Polaroid
           rotate={5}
           z={2}
-          image="guest9"
+          image='guest9'
           imageAlt={"a couple getting holding up their drawing"}
-          text="Play on, short king!"
+          text='Play on, short king!'
         />{" "}
         <Polaroid
           rotate={5}
           z={2}
-          image="guest11"
+          image='guest11'
           imageAlt={"a couple getting holding up their drawing"}
           text=" "
         /> 
