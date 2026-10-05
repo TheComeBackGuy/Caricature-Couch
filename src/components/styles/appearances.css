@@ -1,103 +1,12 @@
-.appointmentContainer {
-  display: flex;
-  width: 100%;
-  flex-flow: column nowrap;
-  align-items: stretch;
-  justify-content: stretch;
-  gap: 20px;
-  margin-top: -3em;
-  /* border: 1px solid red; */
-}
-
-.intakeForm {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-align: left;
-  /* padding: 20px; */
-  background-color: var(--white);
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px var(--tanDark);
-  color: var(--black);
-  overflow: hidden;
-  margin: 0px;
-  border: 3px dashed var(--rainbowBlue);
-}
-
-.formHeader {
-  display: block;
-  width: 100%;
-  padding: 40px 20px;
-  margin-bottom: 3em;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--rainbowOrange);
-  background-image: url("../../../src/app/images/bg-textures-orange.jpg");
-  flex-basis: 100%;
-  /* background-repeat: repeat; */
-}
-
-.formHeader > h1 {
-  color: var(--white);
-  width: 100%;
-  height: fit-content;
-  margin-top: 20px;
-}
-
-.intakeForm > div {
-  display: flex;
-  padding: 0 20px;
-  flex-flow: column nowrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-align: left;
-  margin: 0;
-}
-
-label {
-  display: flex;
-  flex-flow: row nowrap;
-  gap: 10px;
-  width: fit-content;
-  justify-content: flex-start;
-  /* border: 1px solid blue; */
-}
-
 p {
   margin-bottom: 20px;
 }
 
-.form-h3 {
-  /* display: block; */
-  /* width: 100%; */
-  flex-basis: 100%;
-  margin-top: 2em;
-  /* border: 2px solid purple; */
-}
-
-input {
-  display: flex;
-  /* margin: 0 10px; */
-  border: 1px solid var(--rainbowYellow);
-  background-color: var(--white);
-}
-
-textarea {
-  border: 1px solid var(--rainbowYellow);
-}
-
 .timeButton {
-  background-color: var(--tan);
-  color: var(--rainbowOrange);
+  /* background-color: var(--tan); */
+  /* color: black; */
   cursor: pointer;
   margin: 0;
-}
-input[type="button"]:focus {
-  background-color: var(--rainbowTurquoise);
-  color: white;
-  border-color: darkgray;
 }
 
 .timeButtonContainer {
@@ -106,29 +15,70 @@ input[type="button"]:focus {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 15px;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .review {
   display: flex;
   flex-flow: column nowrap;
-  padding: 15px;
+  /* padding: 15px; */
   border-radius: 10px;
   margin-bottom: 20px;
-  background-color: var(--tanLight);
+  /* background-color: var(--tanLight); */
   color: var(--black);
 }
 .timeBlockHour {
   display: flex;
   flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 20px;
 }
 
-.form-content {
+.image-label {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  flex-grow: 2;
+  flex-shrink: 3;
+  /* border: 1px solid red; */
+  /* @media (max-width: 615px) {
+    flex-flow: row nowrap;
+  } */
+}
+
+.sample-image-container {
+  display: flex;
+  width: auto;
+  height: fit-content;
+  min-width: 100px;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  flex-grow: 1;
+  flex-shrink: 4;
+  @media (max-width: 615px) {
+    min-width: 50px;
+    max-width: 200px;
+  }
+}
+.sample-image {
+  display: flex;
+  width: 100%;
+  max-height: 400px;
+  height: inherit;
+  /* width: auto; */
+  object-fit: contain;
+}
+
+.caricature-select {
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
-  align-items: flex-start;
-  gap: 10px;
-  /* border: 5px solid seagreen; */
+  @media (max-width: 615px) {
+    flex-flow: column nowrap;
+    gap: 30px;
+  }
 }

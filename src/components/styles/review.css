@@ -83,6 +83,7 @@ cite {
 }
 
 .headerDiv {
+  z-index: 2;
   width: 100%;
   display: block;
   @media (max-width: 900px) {
@@ -101,6 +102,7 @@ cite {
   text-align: center;
   padding-top: 1.25 em;
   font-size: 5em;
+  z-index: 2;
   color: var(--white);
   @media (max-width: 1400px) {
     padding-top: 1.5 em;
@@ -119,7 +121,7 @@ cite {
 .happy-star {
   position: absolute;
   object-fit: contain;
-  z-index: 99;
+  z-index: 1;
   width: 400px;
   top: -100px;
   left: -150px;
@@ -137,10 +139,10 @@ cite {
     top: -50;
     left: -120;
   }
-  @media (max-width: 815px) {
+  @media (max-width: 900px) {
     width: 200px;
-    top: -40;
-    left: -120;
+    top: -100;
+    left: -50;
   }
   @media (max-width: 615px) {
     width: 200px;
@@ -149,40 +151,46 @@ cite {
   }
   @media (max-width: 500px) {
     position: relative;
-    left: 50%;
-    border: 1px solid red;
+    left: 20px;
   }
 }
 .amazed-star {
   position: absolute;
   object-fit: contain;
-  z-index: 99;
+  z-index: 1;
   top: -100px;
   transform: rotate(15deg);
   width: 400px;
-  right: -150px;
+  right: -20%;
   height: fit-content;
   aspect-ratio: 11 / 12;
   overflow: hidden;
   @media (max-width: 1400px) {
     width: 340px;
-    top: -80;
-    right: -120;
+    /* top: -80;
+    right: -20%; */
   }
-  @media (max-width: 1100px) {
+  /* @media (max-width: 1100px) {
     width: 280px;
     top: -80;
     right: -50px;
-  }
+  } */
   @media (max-width: 960px) {
+    /* display: none; */
+
     width: 280px;
-    top: -80;
-    right: -120;
+    /* top: -80;
+    right: -120; */
   }
-  @media (max-width: 815px) {
-    display: none;
+  @media (max-width: 900px) {
+    width: 150px;
+    right: -20px;
+    top: -100px;
   }
+
   @media (max-width: 500px) {
-    display: none;
+    width: 100px;
+    top: 125px;
+    /* display: none; */
   }
 }

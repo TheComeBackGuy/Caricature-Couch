@@ -44,7 +44,7 @@
 
 .poster-image-container {
   display: flex;
-  width: 130%;
+  width: 80%;
   align-items: center;
   justify-content: center;
 }
@@ -58,6 +58,6 @@
   height: inherit;
   z-index: 1000;
   @media (max-width: 920px) {
-    margin-top:;
+    margin-top: 0;
   }
 }

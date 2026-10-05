@@ -36,7 +36,15 @@ export default function NoAI() {
           that we love.
         </p> */}
       </div>
-      <GlobalHref url="./AboutUs" text="Learn More" />
+      <div
+        style={{
+          height: "100%",
+          display: "flex",
+          alignItems: "flex-end",
+        }}
+      >
+        <GlobalHref url="./AboutUs" text="Learn More" />
+      </div>
     </div>
   );
 }

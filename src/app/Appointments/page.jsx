@@ -5,6 +5,10 @@ import "../globals.css";
 import "../../components/styles/appearances.css";
 import Polaroid from "@/components/Polaroid";
 import PromoSmall from "@/components/PromoSmall";
+import Image from "next/image";
+import BW from "../images/sample-bw.jpg";
+import Shaded from "../images/sample-shaded.jpg";
+import Color from "../images/sample-color.jpg";
 
 export default function Appointments() {
   const [firstname, setFirstName] = useState("");
@@ -166,13 +170,22 @@ export default function Appointments() {
       <div className="contentContainer" style={{ marginTop: "40px" }}>
         <div
           className="intakeForm"
-          style={{ display: thankYouDisplay, flexFlow: "column nowrap" }}
+          style={{
+            display: thankYouDisplay,
+            flexFlow: "column nowrap",
+            padding: "20px",
+          }}
         >
           <h1>Thanks, {firstname}!</h1>
           <>
             <p>
               We're super excited to meet and draw you! We're often able to
               respond within 24 hours. So, hang tight!{" "}
+            </p>
+            <p>
+              If you've emailed us Friday-Sunday, You may not hear from us until
+              Monday. We are quite busy on the weekends giving our events and
+              clients our full attention.
             </p>
             <h2>Rescheduling</h2>
             <p>
@@ -190,28 +203,32 @@ export default function Appointments() {
           </>
         </div>
 
+        {/* <ul className="steps">
+          <li>
+            <h1>1</h1>
+            <br />
+            <p>Fill out the form</p>
+          </li>
+          <li>
+            <>
+              <h1>2</h1>
+              <br />
+              <p> Wait for your confirmation email</p>
+            </>
+          </li>
+          <li>
+            <h1>3</h1>
+            <br />
+            <p> Show up for your appointment</p>
+          </li>
+        </ul> */}
+        <h1 className="pageHeader">Walk up or plan an appointment</h1>
+        <p style={{ padding: "0 20px" }}>
+          You can always just walk up and get drawn, but for those of you who
+          love to have a plan, this is for you! Schedule a time with us and
+          reserve your spot that day.
+        </p>
         <div className="appointmentContainer">
-          <ul className="steps">
-            <li>
-              <h1>1</h1>
-              <br />
-              <p>Fill out the form</p>
-            </li>
-            <li>
-              <>
-                <h1>2</h1>
-                <br />
-                <p> Wait for your confirmation email</p>
-              </>
-            </li>
-            <li>
-              <h1>3</h1>
-              <br />
-              <p> Show up for your appointment</p>
-            </li>
-          </ul>
-          <h1 className="pageHeader">Walk up or plan an appointment</h1>
-
           <div style={{ display: formDisplay }}>
             <form
               name="Couch Appointments"
@@ -221,17 +238,16 @@ export default function Appointments() {
               netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
             >
-              <div className="formHeader">
-                <h1>Appointment Intake Form</h1>
-              </div>
+              {/* <h3>Appointment Intake Form</h3> */}
+
               <input
                 type="hidden"
                 name="form-name"
                 value="Couch Appointments"
               />
               <div className="form-content">
-                <h3 className="form-h3">Contact Information</h3>
-                <div>
+                <section className="form-section">
+                  <h3 className="form-h3">Contact Information</h3>
                   <label>
                     First Name:
                     <input
@@ -242,9 +258,8 @@ export default function Appointments() {
                         setFirstName(e.target.value);
                       }}
                     />
-                  </label>{" "}
-                </div>
-                <div>
+                  </label>
+
                   <label>
                     Last Name:
                     <input
@@ -256,119 +271,176 @@ export default function Appointments() {
                       }}
                     />
                   </label>
-                </div>
-                <label>
-                  Email:
-                  <input
-                    name="email"
-                    type="text"
-                    value={email}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                    }}
-                  />{" "}
-                </label>
 
-                <h3 className="form-h3">Number of Faces</h3>
-                <label>
-                  How many faces are we drawing including pets?
-                  <input
-                    name="numberOfFaces"
-                    type="number"
-                    min="1"
-                    max="10"
-                    value={numberOfFaces}
-                    onChange={(e) => {
-                      setNumberOfFaces(e.target.value);
-                    }}
-                  />
-                </label>
-                <h3 className="form-h3"> What style drawing would you like?</h3>
-                <div style={{ display: "flex", flexFlow: "row nowrap" }}>
-                  <label style={{ textAlign: "center" }}>
-                    <input
-                      type="radio"
-                      name="style"
-                      value="Black & White"
-                      checked={colorStyle === "Black & White"}
-                      onChange={(e) => {
-                        setColorStyle(e.target.value);
-                      }}
-                    />
-                    <br />
-                    B&W Lineart
-                    <br /> $15/person
-                  </label>
-                  <label style={{ textAlign: "center" }}>
-                    <input
-                      type="radio"
-                      name="style"
-                      value="One-Color Shaded"
-                      checked={colorStyle === "One-Color Shaded"}
-                      onChange={(e) => {
-                        setColorStyle(e.target.value);
-                      }}
-                    />
-                    <br />
-                    Grey Shaded
-                    <br /> $20/person
-                  </label>
-                  <label style={{ textAlign: "center" }}>
-                    <input
-                      type="radio"
-                      name="style"
-                      value="Full Color"
-                      checked={colorStyle === "Full Color"}
-                      onChange={(e) => {
-                        setColorStyle(e.target.value);
-                      }}
-                    />
-                    <br />
-                    Full Color
-                    <br /> $30/person
-                  </label>
-                </div>
-                <h3 className="form-h3">Request a Time</h3>
-                <p>
-                  Preferred Date:
                   <label>
+                    Email:
                     <input
-                      name="date"
-                      type="date"
+                      name="email"
+                      type="text"
+                      value={email}
                       onChange={(e) => {
-                        setAppointmentDate(e.target.value);
+                        setEmail(e.target.value);
+                      }}
+                    />{" "}
+                  </label>
+                </section>
+
+                <section className="form-section">
+                  <h3 className="form-h3">Number of Faces</h3>
+
+                  <label>
+                    How many faces are we drawing including pets?
+                    <input
+                      name="numberOfFaces"
+                      type="number"
+                      min="1"
+                      max="10"
+                      value={numberOfFaces}
+                      onChange={(e) => {
+                        setNumberOfFaces(e.target.value);
                       }}
                     />
                   </label>
-                </p>
-                <p>Preferred Time:</p>
-                <div className="timeButtonContainer">
-                  {appointmentTimes.map((x, i) => {
-                    return (
-                      <div className="timeBlockHour" key={i}>
-                        <input
-                          name="time"
-                          type="button"
-                          className="timeButton"
-                          key={i[0]}
-                          value={x[0]}
-                          onMouseUp={(e) => {
-                            setAppointmentStartTime(e.target.value);
-                          }}
-                        />
-                        <input
-                          name="time"
-                          type="button"
-                          className="timeButton"
-                          key={i[1]}
-                          value={x[1]}
-                          onMouseUp={(e) => {
-                            setAppointmentStartTime(e.target.value);
-                          }}
+                </section>
+
+                <section className="form-section">
+                  <h3 className="form-h3">
+                    {" "}
+                    What style drawing would you like?
+                  </h3>
+                  <div className="caricature-select">
+                    <label
+                      className="image-label"
+                      style={{ textAlign: "center" }}
+                    >
+                      <div className="sample-image-container">
+                        <Image
+                          className="sample-image"
+                          src={BW}
+                          alt="Black and white caricature sample of a couple"
+                          width={500}
+                          height={667}
                         />
                       </div>
-                    );
-                  })}
+                      <input
+                        type="radio"
+                        name="style"
+                        value="Black & White"
+                        checked={colorStyle === "Black & White"}
+                        onChange={(e) => {
+                          setColorStyle(e.target.value);
+                        }}
+                      />
+                      B&W Lineart
+                      <br /> $15/person
+                    </label>
+                    <label
+                      className="image-label"
+                      style={{ textAlign: "center" }}
+                    >
+                      <div className="sample-image-container">
+                        <Image
+                          className="sample-image"
+                          src={Shaded}
+                          alt="Shaded caricature sample of a couple"
+                          width={500}
+                          height={667}
+                          // fill={true}
+                        />
+                      </div>
+                      <input
+                        type="radio"
+                        name="style"
+                        value="One-Color Shaded"
+                        checked={colorStyle === "One-Color Shaded"}
+                        onChange={(e) => {
+                          setColorStyle(e.target.value);
+                        }}
+                      />
+                      Grey Shaded
+                      <br /> $20/person
+                    </label>
+                    <label
+                      className="image-label"
+                      style={{ textAlign: "center" }}
+                    >
+                      <div className="sample-image-container">
+                        <Image
+                          className="sample-image"
+                          src={Color}
+                          alt="Color caricature sample of a couple"
+                          width={500}
+                          height={667}
+                        />
+                      </div>
+                      <input
+                        type="radio"
+                        name="style"
+                        value="Full Color"
+                        checked={colorStyle === "Full Color"}
+                        onChange={(e) => {
+                          setColorStyle(e.target.value);
+                        }}
+                      />
+                      Full Color
+                      <br /> $30/person
+                    </label>
+                  </div>
+                </section>
+                <div
+                  style={{
+                    display: "flex",
+                    width: "100%",
+                    gap: "20px",
+                    flexFlow: "row wrap",
+                    alignItems: "flex-start",
+                  }}
+                >
+                  <div>
+                    <h3 className="form-h3">Request a Date</h3>
+                    <p>
+                      {/* Preferred Date: */}
+                      <label>
+                        <input
+                          name="date"
+                          type="date"
+                          onChange={(e) => {
+                            setAppointmentDate(e.target.value);
+                          }}
+                        />
+                      </label>
+                    </p>
+                  </div>
+                  <div className="timeButtonContainer">
+                    <h3 className="form-h3">Request a Time</h3>
+
+                    {appointmentTimes.map((x, i) => {
+                      return (
+                        <div className="timeBlockHour" key={i}>
+                          <input
+                            name="time"
+                            type="button"
+                            className="timeButton"
+                            key={i[0]}
+                            value={x[0]}
+                            onMouseUp={(e) => {
+                              setAppointmentStartTime(e.target.value);
+                            }}
+                          />
+                          <input
+                            name="time"
+                            type="button"
+                            className="timeButton"
+                            key={i[1]}
+                            value={x[1]}
+                            onMouseUp={(e) => {
+                              setAppointmentStartTime(e.target.value);
+                            }}
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
                 {/* </div> */}
                 <div className="commentBox">

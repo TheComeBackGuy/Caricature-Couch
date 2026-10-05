@@ -85,12 +85,10 @@ export default function Home() {
         <div
           className="contentContainer"
           style={{ margin: "40px 0", width: "100%" }}
-        >
-          {/* <h1 className="pageHeader">When's and Where's</h1> */}
-        </div>
+        ></div>
         <div className="promoContainer">
           <Parking />
-          <Reviews />*
+          <Reviews />
         </div>
       </div>
     </>

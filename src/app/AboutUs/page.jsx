@@ -39,7 +39,7 @@ export default function AboutUs() {
         />{" "}
       </div>
       <div className="contentContainer" style={{ marginTop: "40px" }}>
-        <h1>
+        <h1 className="pageHeader">
           Spreading Smiles and Joy With Silly Pictures and Immature Doodles
         </h1>
         <p>

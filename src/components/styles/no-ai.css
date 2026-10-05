@@ -3,7 +3,7 @@
   flex-flow: column nowrap;
   width: 100%;
   height: auto;
-  /* max-width: 400px; */
+  max-width: 400px;
   border-radius: 4px;
   text-align: left;
   padding: 20px;
@@ -24,22 +24,22 @@
 
 .noai-image-container {
   display: flex;
-  width: 100%;
-  height: 300px;
-  max-height: 300px;
+  width: inherit;
+  /* max-height: 150px; */
+  aspect-ratio: 500 / 459;
+  height: auto;
   /* margin-top: -0px; */
   /* margin-bottom: 100px; */
   align-items: center;
   justify-content: center;
   z-index: 500;
-  border: none;
   background-image: none;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .the-image {
-  width: auto;
-  height: 100%;
+  width: inherit;
+  height: auto;
   /* border: 2px solid yellow; */
 }
 
@@ -47,7 +47,7 @@
   color: VAR(--rainbowYellow);
   margin-top: 50%;
   text-align: left;
-  /* font-size: 5em; */
+  font-size: 3em;
 }
 .ai-container > .text-area > h2 {
   color: var(--white);

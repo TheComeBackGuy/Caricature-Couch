@@ -134,8 +134,8 @@ export default function Contact() {
           to follow up with you on Monday.{" "}
         </p>
         <p>
-          If you would like to setup an appointment please reach out here as
-          well.
+          If you would like to setup an appointment please reach out on the
+          Appointments page.
         </p>
 
         {/* <h2>Alert</h2>
@@ -152,49 +152,48 @@ export default function Contact() {
           onSubmit={handleSubmit}
           className="intakeForm"
         >
-          <div>
+          <div className="appointmentContainer">
             <input type="hidden" name="form-name" value="Couch Contact" />
-            <label>
-              Name:
-              <input
-                name="name"
-                type="text"
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-              ></input>
-            </label>{" "}
-            <label>
-              Email:
-              <input
-                name="email"
-                type="text"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-              ></input>
-            </label>{" "}
-          </div>
-          <div className="commentBox">
-            <label>
-              Details:
-              <textarea
-                name="details"
-                type="textbox"
-                value={details}
-                onChange={(e) => {
-                  setDetails(e.target.value);
-                }}
-              ></textarea>
-              {/* <cite className="error" style={{ display: warning }}>
-                Looks like you've got some missing info there.
-              </cite> */}
-            </label>{" "}
-            <button className="submit" disabled={isDisabled} submit="true">
-              Submit
-            </button>
+            <section className="form-section">
+              <label>
+                Name:
+                <input
+                  name="name"
+                  type="text"
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                ></input>
+              </label>{" "}
+              <label>
+                Email:
+                <input
+                  name="email"
+                  type="text"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                ></input>
+              </label>{" "}
+            </section>
+            <div className="commentBox">
+              <label>
+                Details:
+                <textarea
+                  name="details"
+                  type="textbox"
+                  value={details}
+                  onChange={(e) => {
+                    setDetails(e.target.value);
+                  }}
+                />
+              </label>
+              <button className="submit" disabled={isDisabled} submit="true">
+                Submit
+              </button>
+            </div>
           </div>
         </form>
         {<div style={{ display: thankYouVisible ? "flex" : "none" }} />}
