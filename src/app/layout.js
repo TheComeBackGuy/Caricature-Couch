@@ -26,6 +26,7 @@ const montserratLight = Montserrat({
 
 const LuckiestGuy = Luckiest_Guy({
   weight: "400",
+  subsets: ["latin"],
 });
 
 export const metadata = {
