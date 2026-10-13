@@ -255,7 +255,7 @@ form {
 
 .commentBox {
   display: block;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   width: 100%;
   align-items: flex-start;
   justify-content: flex-start;

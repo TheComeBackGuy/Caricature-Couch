@@ -10,7 +10,16 @@ export default function Footer() {
       <div className="footerInfo">
         <div>
           <Link rel="url" href="https://maps.app.goo.gl/MmGAa6trV14TP7XD7">
-            <Image src={Pin} alt="a map pin" />
+            <Image
+              src={Pin}
+              alt="a map pin"
+              loading="lazy"
+              width="29"
+              height="41"
+              decoding="async"
+              data-nimg="1"
+              style="color:transparent"
+            />
             <p>
               1400 Market St. #126
               <br />

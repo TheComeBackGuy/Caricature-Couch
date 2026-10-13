@@ -13,7 +13,7 @@ export default function Polaroid({ rotate, image, imageAlt, text }) {
         <Image
           src={Pin}
           alt="a map pin"
-          loading="lazy"
+          loading="eager"
           width="29"
           height="41"
           style={{ margin: "10px" }}

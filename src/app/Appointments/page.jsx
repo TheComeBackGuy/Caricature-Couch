@@ -191,7 +191,7 @@ export default function Appointments() {
             <p>
               If you need to reschedule for any reason, please email us. We will
               work with you on a new appointment. It is important to know your
-              initial desposit will be lost and we will ask for an additional
+              initial deposit will be lost and we will ask for an additional
               deposit for your new appointment.
             </p>
             <h2> Cancelling</h2>
@@ -318,8 +318,16 @@ export default function Appointments() {
                           className="sample-image"
                           src={BW}
                           alt="Black and white caricature sample of a couple"
-                          width={500}
-                          height={667}
+                          loading="lazy"
+                          width="500"
+                          height="667"
+                          decoding="async"
+                          data-nimg="1"
+                          style="color:transparent"
+                          srcSet="
+		/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsample-bw.4742f4b3.jpg&w=640&q=75 1x,
+		/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsample-bw.4742f4b3.jpg&w=1080&q=75 2x
+	"
                         />
                       </div>
                       <input
@@ -343,9 +351,12 @@ export default function Appointments() {
                           className="sample-image"
                           src={Shaded}
                           alt="Shaded caricature sample of a couple"
-                          width={500}
-                          height={667}
-                          // fill={true}
+                          loading="lazy"
+                          width="500"
+                          height="667"
+                          decoding="async"
+                          data-nimg="1"
+                          style="color:transparent"
                         />
                       </div>
                       <input
@@ -369,8 +380,12 @@ export default function Appointments() {
                           className="sample-image"
                           src={Color}
                           alt="Color caricature sample of a couple"
-                          width={500}
-                          height={667}
+                          loading="lazy"
+                          width="500"
+                          height="667"
+                          decoding="async"
+                          data-nimg="1"
+                          style="color:transparent"
                         />
                       </div>
                       <input
@@ -444,8 +459,9 @@ export default function Appointments() {
                 </div>
                 {/* </div> */}
                 <div className="commentBox">
+                  <h3 className="form-h3">Additional Notes</h3>
+                  Is there anything else you'd like to let us know:
                   <label>
-                    Is there anything else you'd like to let us know:
                     <textarea
                       name="details"
                       type="textbox"
