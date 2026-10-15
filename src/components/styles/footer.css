@@ -20,6 +20,7 @@ footer {
   text-align: center;
   align-items: flex-end;
   justify-content: space-evenly;
+  /* border: 1px solid red; */
   @media (max-width: 600px) {
     flex-flow: row wrap;
   }

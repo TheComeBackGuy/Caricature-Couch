@@ -14,6 +14,7 @@
 .siteContainer {
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
   /* max-width: 1500px; */
   width: 100%;
   /* border: 1px solid red; */
@@ -30,12 +31,10 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  /* background-image: url("images/top-boxes.gif"); */
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  overflow: visible;
+  max-width: 1200px;
+  background-image: url("../../public/images/bg.jpg");
   /* min-width: 300px; */
+  /* border: 5px solid red; */
 }
 
 .footer {
@@ -54,6 +53,8 @@
   /* border: 3px solid purple; */
 }
 .footerContainer {
+  width: 100%;
+  max-width: 1200px;
   height: auto;
   flex-flow: column nowrap;
 }
