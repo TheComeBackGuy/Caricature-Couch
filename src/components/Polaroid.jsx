@@ -17,10 +17,7 @@ export default function Polaroid({ rotate, image, imageAlt, text }) {
           width="29"
           height="41"
           style={{ margin: "10px" }}
-          srcset="
-		/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpin.92ddf70d.gif&w=32&q=75 1x,
-		/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpin.92ddf70d.gif&w=64&q=75 2x
-	"
+
           // placeholder="blur"
         />
         <p>

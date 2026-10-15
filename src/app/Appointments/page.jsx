@@ -324,10 +324,6 @@ export default function Appointments() {
                           decoding="async"
                           data-nimg="1"
                           style="color:transparent"
-                          srcSet="
-		/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsample-bw.4742f4b3.jpg&w=640&q=75 1x,
-		/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsample-bw.4742f4b3.jpg&w=1080&q=75 2x
-	"
                         />
                       </div>
                       <input

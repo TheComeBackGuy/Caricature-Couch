@@ -18,7 +18,7 @@ export default function CopiesPromo() {
             }}
           />
         </div>
-        {/* <h2 style={{}}>Okay, we're being dramatic</h2>
+        {/* <h2>Okay, we're being dramatic</h2>
         <p className="copiesP">
           We just love that we can now give you high-quality copies of your
           caricatures.

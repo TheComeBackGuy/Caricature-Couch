@@ -40,7 +40,7 @@ export default function Products() {
       </div>
       <div style={{ margin: "40px 20px" }}>
         <h1 className="pageHeader">We can offer more than ever!</h1>
-        <p style={{ padding: "0 30px " }}>
+        <p style={{ padding: "0 30px" }}>
           Small as it is, our new store isn't just a place to get a caricature
           done. It's a hub for all of our art. A much as we love caricatures,
           and we do, we doodle a lot. Now it's time to share those doodles and

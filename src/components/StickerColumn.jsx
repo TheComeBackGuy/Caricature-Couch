@@ -69,7 +69,6 @@ export default function StickerColumn({ side, divSizes }) {
         width: "inherit",
         height: stickerHeight,
         gap: "150px",
-        // border: "2px solid red",
         overflow: "visible",
         clipBox: `rect(0px, 0px, 0px, 0px)`,
         paddingLeft: "10px",

@@ -18,10 +18,10 @@ export default function Reviews() {
   return (
     <div className="reviewListContainer">
       <div className="amazed-star">
-        <Image src={SurprisedStar} alt="An amazed star" fill={true} />
+        <Image src={SurprisedStar} alt="An amazed star" />
       </div>
       <div className="happy-star">
-        <Image src={HappyStar} alt="A happy star" fill={true} />
+        <Image src={HappyStar} alt="A happy star" />
       </div>
       <div className="headerDiv">
         <h1
