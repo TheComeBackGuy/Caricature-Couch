@@ -18,7 +18,6 @@ export default function Footer() {
               height="41"
               decoding="async"
               data-nimg="1"
-              style="color:transparent"
             />
             <p>
               1400 Market St. #126

@@ -323,7 +323,6 @@ export default function Appointments() {
                           height="667"
                           decoding="async"
                           data-nimg="1"
-                          style="color:transparent"
                         />
                       </div>
                       <input
@@ -352,7 +351,6 @@ export default function Appointments() {
                           height="667"
                           decoding="async"
                           data-nimg="1"
-                          style="color:transparent"
                         />
                       </div>
                       <input
@@ -381,7 +379,6 @@ export default function Appointments() {
                           height="667"
                           decoding="async"
                           data-nimg="1"
-                          style="color:transparent"
                         />
                       </div>
                       <input

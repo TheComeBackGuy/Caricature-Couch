@@ -9,16 +9,7 @@ export default function Header() {
   return (
     <header>
       {/* <div className="logoContainer"> */}
-      <Link
-        href={"/"}
-        className="logoContainer"
-        // style={{
-        //   display: "flex",
-        //   position: "relative",
-        //   width: "400px",
-        //   height: "200px",
-        // }}
-      >
+      <Link href={"/"} className="logoContainer">
         <Image
           src={StickerLogo}
           alt="Hartsyfartsy's Caricature Couch Logo"

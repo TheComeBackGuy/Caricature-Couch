@@ -19,7 +19,6 @@ export default function FooterCouch() {
             decoding="async"
             data-nimg="1"
             className="guest"
-            style="color:transparent"
             sizes="
 		(min-width: 1580px) 1220px,
 		(min-width: 920px) calc(90.63vw - 194px),
@@ -39,7 +38,6 @@ export default function FooterCouch() {
             decoding="async"
             data-nimg="1"
             className="couch"
-            style="color:transparent"
             sizes="
 		(min-width: 1580px) 1220px,
 		(min-width: 920px) calc(90.63vw - 194px),
