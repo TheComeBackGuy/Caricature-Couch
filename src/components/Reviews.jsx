@@ -17,16 +17,10 @@ const mouths = [Mouth1, Mouth2, Mouth3];
 export default function Reviews() {
   return (
     <div className="reviewListContainer">
-      <div className="amazed-star">
-        <Image src={SurprisedStar} alt="An amazed star" />
-      </div>
-      <div className="happy-star">
-        <Image src={HappyStar} alt="A happy star" />
-      </div>
       <div className="headerDiv">
         <h1
           style={{
-            textAlign: "center",
+            textAlign: "left",
             paddingTop: ".5em",
             zIndex: "500",
             color: "var(--white)",
@@ -36,6 +30,9 @@ export default function Reviews() {
           <br />
           Google Reviews!
         </h1>
+        <div>
+          <Image src={HappyStar} alt="A happy star" className="happy-star" />
+        </div>
       </div>
 
       {ListOfReviews.map((r, i) => {
