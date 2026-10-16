@@ -44,7 +44,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-image: url("images/footer-boxes.gif");
+  /* background-image: url("images/footer-boxes.gif"); */
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -54,7 +54,7 @@
 }
 .footerContainer {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   height: auto;
   flex-flow: column nowrap;
 }
