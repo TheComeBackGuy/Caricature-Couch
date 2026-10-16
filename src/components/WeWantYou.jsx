@@ -15,6 +15,7 @@ export default function WeWantYou() {
                 src={You}
                 className="picture"
                 alt="parody of the we want you poster"
+                sizes="(max-width: 600px) 487px, 500px"
               />
             </div>
             <h1>WE WANT YOU</h1>

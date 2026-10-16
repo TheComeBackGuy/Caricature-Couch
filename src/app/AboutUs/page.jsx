@@ -14,28 +14,28 @@ export default function AboutUs() {
           imageAlt={
             "Two poeple smiling in front of the Chattanooga Choo Choo building"
           }
-          text="Me and Mandy the day before announcing the opening of the store"
+          text=""
         />
         <Polaroid
           rotate={0}
           z={2}
           image="dinner"
           imageAlt={"Three smiling people having dinner"}
-          text="Sometimes, the best times were after a busy show"
+          text=""
         />
         <Polaroid
           rotate={5}
           z={2}
           image="krystalMe"
           imageAlt={"Two people making silly faces"}
-          text="Just a couple of goobs. "
+          text=""
         />{" "}
         <Polaroid
           rotate={5}
           z={2}
           image="krystalMe"
           imageAlt={"Two people making silly faces"}
-          text="Just a couple of goobs. "
+          text=""
         />{" "}
       </div>
       <div className="contentContainer" style={{ marginTop: "40px" }}>

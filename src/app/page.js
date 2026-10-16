@@ -26,28 +26,28 @@ export default function Home() {
           imageAlt={
             "Two poeple smiling in front of the Chattanooga Choo Choo building"
           }
-          text="Honestly, our guests are the best people!"
+          text=""
         />
         <Polaroid
           rotate={0}
           z={10}
           image="wall"
           imageAlt={"the back wall"}
-          text="We can draw cute AND crazy!"
+          text=""
         />
         <Polaroid
           rotate={5}
           z={0}
           image="guest3"
           imageAlt={"Our booth in the lobby"}
-          text="We adore drawing couples!"
+          text=""
         />
         <Polaroid
           rotate={5}
           z={0}
           image="guest10"
           imageAlt={"Our booth in the lobby"}
-          text=" "
+          text=""
         />{" "}
       </div>
       <div className="contentContainer">

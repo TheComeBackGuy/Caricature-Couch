@@ -14,28 +14,28 @@ export default function Products() {
           z={1}
           image="guest4"
           imageAlt={"A guest holding her caricature up"}
-          text="Our guests are always walking away smiling."
+          text=""
         />
         <Polaroid
           rotate={0}
           z={2}
           image="guest5"
           imageAlt={"A couple happily displaying their drawing"}
-          text="We love drawing couples!"
+          text=""
         />
         <Polaroid
           rotate={5}
           z={2}
           image="guest6"
           imageAlt={"A couple happily displaying their drawing"}
-          text="We're all about drawing people together."
+          text=""
         />{" "}
         <Polaroid
           rotate={5}
           z={2}
           image="guest12"
           imageAlt={"A couple happily displaying their drawing"}
-          text="We're all about drawing people together."
+          text=""
         />{" "}
       </div>
       <div style={{ margin: "40px 20px" }}>

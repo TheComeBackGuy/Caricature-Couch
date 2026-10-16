@@ -136,37 +136,6 @@ export default function Appointments() {
 
   return (
     <>
-      {/* <div className="polaroidContainer">
-        <Polaroid
-          rotate={-5}
-          z={1}
-          image='guest7'
-          imageAlt={"a couple getting holding up their drawing"}
-          text='Getting a bit sillier is fun'
-        />{" "}
-        <Polaroid
-          rotate={0}
-          z={0}
-          image='guest8'
-          imageAlt={"a couple getting holding up their drawing"}
-          text='We love giving couples a keepsake to remember. '
-        />
-        <Polaroid
-          rotate={5}
-          z={2}
-          image='guest9'
-          imageAlt={"a couple getting holding up their drawing"}
-          text='Play on, short king!'
-        />{" "}
-        <Polaroid
-          rotate={5}
-          z={2}
-          image='guest11'
-          imageAlt={"a couple getting holding up their drawing"}
-          text=" "
-        /> 
-      </div>
-*/}
       <div className="contentContainer" style={{ marginTop: "40px" }}>
         <div
           className="intakeForm"
@@ -203,25 +172,6 @@ export default function Appointments() {
           </>
         </div>
 
-        {/* <ul className="steps">
-          <li>
-            <h1>1</h1>
-            <br />
-            <p>Fill out the form</p>
-          </li>
-          <li>
-            <>
-              <h1>2</h1>
-              <br />
-              <p> Wait for your confirmation email</p>
-            </>
-          </li>
-          <li>
-            <h1>3</h1>
-            <br />
-            <p> Show up for your appointment</p>
-          </li>
-        </ul> */}
         <h1 className="pageHeader">Walk up or plan an appointment</h1>
         <p style={{ padding: "0 20px" }}>
           You can always just walk up and get drawn, but for those of you who

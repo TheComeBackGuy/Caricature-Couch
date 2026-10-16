@@ -13,28 +13,28 @@ export default function Directions() {
           z={1}
           image="booth2"
           imageAlt={"Our cozy little booth"}
-          text="That's us in the corner!"
+          text=""
         />
         <Polaroid
           rotate={0}
           z={2}
           image="chatSign"
           imageAlt={"A light up sign spelling Chattanooga"}
-          text="Feeling lucky to live here every day. "
+          text=""
         />{" "}
         <Polaroid
           rotate={5}
           z={2}
           image="choochOutside"
           imageAlt={"The side of the Parking garage seen from the Choo Choo"}
-          text="Look at that outside facade! It's gorgeous. "
+          text=""
         />
         <Polaroid
           rotate={5}
           z={2}
           image="choochOutside"
           imageAlt={"The side of the Parking garage seen from the Choo Choo"}
-          text="Look at that outside facade! It's gorgeous. "
+          text=""
         />
       </div>
       <div

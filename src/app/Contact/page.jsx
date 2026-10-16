@@ -98,14 +98,14 @@ export default function Contact() {
           z={1}
           image="dennis"
           imageAlt={"Dennis sitting at his easel drawing caricartures"}
-          text="Catching Dennis off-guard at a wedding."
+          text=""
         />{" "}
         <Polaroid
           rotate={0}
           z={0}
           image="couple"
           imageAlt={"A picture of two people making funny faces"}
-          text="We are just a couple of goofballs with bills."
+          text=""
         />
         <Polaroid
           rotate={5}
@@ -119,7 +119,7 @@ export default function Contact() {
           z={2}
           image="team"
           imageAlt={"A picture of the Chattanooga Choo Choo"}
-          text="SantaCaligon 2019. What a year!"
+          text=""
         />
       </div>
       <div className="contentContainer" style={{ marginTop: "40px" }}>
