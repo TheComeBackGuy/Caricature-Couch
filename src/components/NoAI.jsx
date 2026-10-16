@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import NoaiSticker from "../app/images/noai.png";
+import NoaiSticker from "../app/images/noai.webp";
 import "./styles/no-ai.css";
 import GlobalHref from "./GlobalHref";
 

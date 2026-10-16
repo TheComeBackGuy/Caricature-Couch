@@ -112,7 +112,7 @@ export default function Contact() {
           z={2}
           image="team"
           imageAlt={"A picture of the Chattanooga Choo Choo"}
-          text="SantaCaligon 2019. What a year!"
+          text=""
         />
         <Polaroid
           rotate={5}

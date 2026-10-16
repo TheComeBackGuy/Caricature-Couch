@@ -63,14 +63,14 @@ export default function Directions() {
         <h1 className="pageHeader">Parking</h1>
         <ImagePromo
           theme="white"
-          img="/polaroids/pol-parkingLot.jpg"
+          img="/polaroids/pol-parkingLot.webp"
           alt="A parking lot filled with cars"
           hdr="Parking Lot"
           p="There is paid parking in the front loop and in the back of the Choo Choo. Be sure to pay at the booth. It's a steep ticket. "
         />
         <ImagePromo
           theme="white"
-          img="/polaroids/pol-parkingGarage.jpg"
+          img="/polaroids/pol-parkingGarage.webp"
           alt="A4 story parking garage"
           hdr="Parking Garage"
           p="The parking garage next door is also a great place to park, especially in the heat of summer. "

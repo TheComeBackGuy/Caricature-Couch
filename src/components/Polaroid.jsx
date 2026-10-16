@@ -3,9 +3,6 @@ import React from "react";
 import "./styles/polaroid.css";
 import Image from "next/image";
 import Pin from "@/app/images/pin.gif";
-// import Pol1 from "../app/images/polaroids/pol-1.jpg";
-// import Pol2 from "../images/polaroids/pol-2.jpg";
-// import Pin from "../app/images/pin.gif";
 
 export default function Polaroid({ rotate, image, imageAlt, text }) {
   function location() {
@@ -34,7 +31,7 @@ export default function Polaroid({ rotate, image, imageAlt, text }) {
       <div className="polaroidPicture">
         {/* <img src={`/polaroids/pol-${image}.jpg`} alt={imageAlt} /> */}
         <Image
-          src={`/polaroids/pol-${image}.jpg`}
+          src={`/polaroids/pol-${image}.webp`}
           alt={imageAlt}
           fill
           sizes="(max-width: 600px) 100vw, 395px"

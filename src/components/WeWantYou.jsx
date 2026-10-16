@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import You from "../app/images/we want you.png";
+import You from "../app/images/we want you.webp";
 import "./styles/we-want-you.css";
 import GlobalHref from "./GlobalHref";
 
@@ -16,6 +16,7 @@ export default function WeWantYou() {
                 className="picture"
                 alt="parody of the we want you poster"
                 sizes="(max-width: 600px) 487px, 500px"
+                fetchPriority="high"
               />
             </div>
             <h1>WE WANT YOU</h1>

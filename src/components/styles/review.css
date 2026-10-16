@@ -10,7 +10,7 @@
   padding: 0 20px;
   align-items: stretch;
   justify-content: stretch;
-  background-image: url("../../app/images/bg-textures-orange-small.jpg");
+  background-image: url("../../app/images/bg-textures-orange-small.webp");
   border-top: 20px solid var(--rainbowYellow);
   border-bottom: 20px solid var(--rainbowRed);
   align-self: center;

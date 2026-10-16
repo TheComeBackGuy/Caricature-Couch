@@ -1,5 +1,5 @@
 import React from "react";
-import ParkingGarage from "../../src/app/images/Parking Garage.png";
+import ParkingGarage from "../../src/app/images/Parking Garage.webp";
 import Image from "next/image";
 import "./styles/parking.css";
 import GlobalHref from "./GlobalHref";
